@@ -6,9 +6,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uzum Market</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-top"></div>
+        <nav class="navbarBox page__size">
+            <div class="nav__wrapper">
+                <div class="uzumLogo">
+                    <a href="./index.html">
+                        <svg width="215" height="32" viewBox="0 0 215 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_6827)">
+                                <mask id="mask0_1_6827" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="215" height="32">
+                                    <path d="M215 0H0V32H215V0Z" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_1_6827)">
+                                    <path
+                                        d="M184.63 9.9482H189.047L183.466 16.2628L189.509 22.9514H185.081L179.25 16.5839V22.9514H175.5V5.92307H179.25V16.0406L184.63 9.9482Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M167.097 12.7422V9.94467H163.347V22.9479H167.097V17.2047C167.097 14.9787 168.713 13.55 170.769 13.55H173.221V9.66951H171.38C169.101 9.68009 167.453 11.6133 167.097 12.7422Z"
+                                        fill="#7000FF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M158.496 9.94467V18.383C158.496 19.5189 158.817 19.7976 159.576 19.7941H160.169V22.9479H158.02C157.307 22.9842 156.603 22.7825 156.017 22.3744C155.431 21.9663 154.998 21.375 154.785 20.6937C153.872 22.3235 151.963 23.2513 149.882 23.2513C145.945 23.2513 143.426 19.847 143.507 16.4322C143.507 13.0561 145.733 9.69067 150.069 9.69067C152.587 9.69067 154.006 10.7913 154.813 11.9943L154.785 9.94467H158.496ZM147.127 16.471C147.127 18.5276 148.732 19.9987 150.848 19.9987C153.05 19.9987 154.641 18.51 154.641 16.471C154.641 14.4319 153.05 12.9891 150.848 12.9891C148.718 12.9891 147.127 14.4143 147.127 16.471Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M130.328 12.1178C131.217 10.6608 133.005 9.6942 135.376 9.6942C139.408 9.6942 141.341 12.2377 141.341 15.388V22.9408H137.591V15.9065C137.591 14.4214 136.73 13.0843 134.928 13.0843C133.125 13.0843 132.236 14.3543 132.236 15.8642V22.962H128.472V15.8748C128.472 14.3649 127.527 13.0949 125.713 13.0949C123.9 13.0949 123.103 14.4214 123.103 15.9171V22.9514H119.353V15.388C119.353 12.2377 121.406 9.6942 125.424 9.6942C127.463 9.6942 129.424 10.6608 130.328 12.1178Z"
+                                        fill="#7000FF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M196.818 9.6942C192.497 9.6942 189.763 12.1036 189.763 16.4604C189.763 20.8171 192.493 23.2548 196.853 23.2548C203.112 23.2548 203.496 19.0215 203.496 19.0215H199.376C199.376 19.0215 199.058 20.3444 196.857 20.3444C194.458 20.3444 193.717 18.9016 193.717 17.4728H203.736C203.785 17.1386 203.812 16.8016 203.817 16.4639C203.817 12.1036 201.073 9.6942 196.818 9.6942ZM193.77 15.1763C193.77 14.118 194.476 12.6081 196.818 12.6081C199.161 12.6081 199.813 14.118 199.813 15.1763H193.77Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M215 9.70126V12.721L210.915 12.7316V17.3176C210.915 19.1309 211.395 19.6988 212.679 19.6988H215V22.9831H212.679C208.943 22.9831 207.179 21.4486 207.179 17.808V12.7351H205.285V10.5761L208.904 7.12249H210.929V9.70126H215Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M103.623 9.68008C101.249 9.68008 99.4606 10.6467 98.5716 12.1177C97.672 10.6467 95.7106 9.68008 93.6681 9.68008C89.6641 9.68008 87.5969 12.2377 87.5969 15.3879V22.9514H91.3504V15.9171C91.3504 14.4072 92.1441 13.0949 93.9609 13.0949C95.7777 13.0949 96.7301 14.3649 96.7301 15.8748V22.962H100.48V15.8642C100.48 14.3543 101.369 13.0843 103.172 13.0843C104.975 13.0843 105.835 14.4072 105.835 15.9065V22.9408H109.585V15.3879C109.585 12.2377 107.652 9.68008 103.623 9.68008Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M68.3002 9.93408V13.0985L60.8108 19.787H68.7482V22.9514H55.8262V19.787L63.3296 13.0985H56.119V9.93408H68.3002Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M78.0827 19.7729C79.8183 19.7729 80.9825 18.8169 80.9825 16.7532V9.94467H84.736V16.8943C84.736 21.4345 80.9401 23.1983 78.0933 23.1983C75.2464 23.1983 71.4541 21.4239 71.4541 16.8943V9.94467H75.2182V16.7532C75.2182 18.8169 76.347 19.7729 78.0827 19.7729Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M46.7211 19.7729C48.4426 19.7729 49.6103 18.8169 49.6103 16.7532V9.94467H53.3603V16.8943C53.3603 21.4345 49.5574 23.1983 46.7352 23.1983C43.8707 23.1983 40.0925 21.4239 40.0925 16.8943V9.94467H43.846V16.7532C43.846 18.8169 44.9996 19.7729 46.7211 19.7729Z"
+                                        fill="#7000FF" />
+                                    <path
+                                        d="M31.9896 16.0053C31.9889 19.1704 31.0498 22.2643 29.2912 24.8955C27.5326 27.5268 25.0334 29.5772 22.1098 30.7875C19.1861 31.9978 15.9693 32.3135 12.8663 31.6949C9.76317 31.0762 6.91323 29.5508 4.67686 27.3117C2.44049 25.0726 0.918157 22.2204 0.302411 19.1158C-0.313335 16.0111 0.0051626 12.7936 1.21762 9.87001C2.43008 6.94646 4.48204 4.44826 7.11396 2.6914C9.74588 0.934529 12.8396 -0.00208978 16.0037 3.5011e-06C18.1047 -0.000924639 20.1854 0.412484 22.1266 1.21658C24.0679 2.02068 25.8316 3.1997 27.317 4.68621C28.8023 6.17271 29.9802 7.93754 30.7831 9.87977C31.5861 11.822 31.9985 13.9035 31.9966 16.0053H31.9896ZM17.8304 5.5597C17.2309 5.50326 16.6173 5.47856 15.9966 5.47856C15.3759 5.47856 14.7658 5.50326 14.1663 5.5597V14.0933H17.8304V5.5597ZM26.2942 10.5338C24.9588 10.0949 23.5942 9.7507 22.2104 9.5037V16.672C22.2104 21.8296 20.0239 24.5424 15.9931 24.5424C11.9622 24.5424 9.78278 21.8296 9.78278 16.672V9.5037C8.39797 9.75113 7.0322 10.0953 5.6955 10.5338V16.7108C5.67018 18.0799 5.91786 19.4402 6.42408 20.7124C6.93029 21.9845 7.68489 23.143 8.64378 24.1201C9.60267 25.0973 10.7467 25.8734 12.0088 26.4033C13.271 26.9331 14.6261 27.206 15.9949 27.206C17.3637 27.206 18.7187 26.9331 19.9809 26.4033C21.2431 25.8734 22.387 25.0973 23.3459 24.1201C24.3048 23.143 25.0594 21.9845 25.5656 20.7124C26.0718 19.4402 26.3195 18.0799 26.2942 16.7108V10.5338Z"
+                                        fill="#7000FF" />
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_6827">
+                                    <rect width="215" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="catalogBox">
+                    <div class="catolog-icon">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.09" y="10" width="16" height="10" rx="1" fill="#5C5CD6" />
+                            <rect x="4.09" y="10" width="16" height="10" rx="1" stroke="#5C5CD6" stroke-width="2" />
+                            <rect x="5.09" y="11" width="14" height="8" rx="1" fill="#EAEAF9" />
+                            <mask id="path-3-inside-1_1_4912" fill="white">
+                                <path
+                                    d="M5.10001 5C5.10001 3.89543 5.99544 3 7.10001 3H17.08C18.1846 3 19.08 3.89543 19.08 5H5.10001Z" />
+                            </mask>
+                            <path
+                                d="M5.10001 5C5.10001 2.79086 6.89087 1 9.10001 1H15.08C17.2891 1 19.08 2.79086 19.08 5C19.08 5 18.1846 5 17.08 5H7.10001C5.99544 5 5.10001 5 5.10001 5ZM19.08 5H5.10001H19.08ZM5.10001 5V3V5ZM19.08 3V5V3Z"
+                                fill="#5C5CD6" mask="url(#path-3-inside-1_1_4912)" />
+                            <mask id="path-5-inside-2_1_4912" fill="white">
+                                <path
+                                    d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z" />
+                            </mask>
+                            <path
+                                d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z"
+                                fill="#5C5CD6" />
+                            <path
+                                d="M4.10999 8C4.10999 5.79086 5.90085 4 8.10999 4H16.08C18.2891 4 20.08 5.79086 20.08 8C20.08 8 19.1846 8 18.08 8H6.10999C5.00542 8 4.10999 8 4.10999 8ZM20.08 8H4.10999H20.08ZM4.10999 8V6V8ZM20.08 6V8V6Z"
+                                fill="#5C5CD6" mask="url(#path-5-inside-2_1_4912)" />
+                        </svg>
+                    </div>
+                    <p>Katalog</p>
+                </div>
+                <div class="input__products__box">
+                    <label>
+                        <input type="search" placeholder="Mahsulotlar va turkumliklar izlash">
+                    </label>
+                    <span class="search-icon">
+                        <i class='bx bx-search-alt-2'></i>
+                    </span>
+                </div>
+                <div class="account__box">
+                    <button class="account__box__btn">
+                        <i class='bx bx-user'></i>
+                        <span class="account__button__label">Kirish</span>
+                    </button>
+                    <button class="account__box__btn">
+                        <i class='bx bx-heart'></i>
+                        <span class="account__button__label">Saralangan</span>
+                    </button>
+                    <button class="account__box__btn">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="account__button__label">Savat</span>
+                    </button>
+                </div>
+            </div>
+            <div class="nav__list__box">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Elektronika</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Maishiy texnika</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Kiyim</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Poyabzallar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Aksessuarlar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Goʻzallik va parvarish</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Salomatlik</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link"> Uy-roʻzgʻor buyumlari </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Qurilish va taʼmirlash</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Avtotovarlar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Bolalar tovarlari</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Xobbi va ijod</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Sport va hordiq</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Oziq-ovqat mahsulotlari</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Maishiy kimyoviy moddalar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Kanselyariya tovarlari</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Hayvonlar uchun tovarlar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Hayvonlar uchun tovarlar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Dacha, bogʻ va tomorqa</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Reabilitatsiya uchun subsidiyalangan mahsulotlar</a>
+                    </li>
+                </ul>
+                <div class="more">
+                    <span class="more__text">Yana</span>
+                    <span class="more__icon">
+                        <i class='bx bx-chevron-down'></i>
+                    </span>
+                </div> 
+            </div>
+        </nav>
+    </header>
 
     <script src="./styles/main.css"></script>
 </body>

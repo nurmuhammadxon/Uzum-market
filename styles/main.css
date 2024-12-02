@@ -66,17 +66,28 @@ header .navbarBox {
     height: 32px;
 }
 
-.nav__wrapper .catalogBox {
+.btn__catalog {
+    border: none;
+    background-color: transparent;
+}
+
+.catalogBox {
     width: 120px;
     height: 40px;
     padding: 0px 16px;
     border-radius: 4px;
     background-color: #3131C41A;
+    color: #7f4dff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     cursor: pointer;
+}
+
+.nav__wrapper .catalogBox:hover {
+    background-color: #ceccff;
+
 }
 
 .catalogBox .catolog-icon {
@@ -141,7 +152,8 @@ header .navbarBox {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 28px;
+    gap: 15px;
+    cursor: pointer;
 }
 
 .account__box .account__box__btn {
@@ -158,6 +170,13 @@ header .navbarBox {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #000;
+    cursor: pointer;
+    padding: 8px 8px;
+}
+
+.account__box .account__box__btn:hover {
+    background-color: #dee0e5;
+    border-radius: 4px;
 }
 
 .account__box .account__box__btn i {

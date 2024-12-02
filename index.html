@@ -70,33 +70,36 @@
                         </svg>
                     </a>
                 </div>
-                <div class="catalogBox">
-                    <div class="catolog-icon">
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4.09" y="10" width="16" height="10" rx="1" fill="#5C5CD6" />
-                            <rect x="4.09" y="10" width="16" height="10" rx="1" stroke="#5C5CD6" stroke-width="2" />
-                            <rect x="5.09" y="11" width="14" height="8" rx="1" fill="#EAEAF9" />
-                            <mask id="path-3-inside-1_1_4912" fill="white">
+                <button class="btn__catalog">
+                    <div class="catalogBox">
+                        <div class="catolog-icon">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4.09" y="10" width="16" height="10" rx="1" fill="#5C5CD6" />
+                                <rect x="4.09" y="10" width="16" height="10" rx="1" stroke="#5C5CD6" stroke-width="2" />
+                                <rect x="5.09" y="11" width="14" height="8" rx="1" fill="#EAEAF9" />
+                                <mask id="path-3-inside-1_1_4912" fill="white">
+                                    <path
+                                        d="M5.10001 5C5.10001 3.89543 5.99544 3 7.10001 3H17.08C18.1846 3 19.08 3.89543 19.08 5H5.10001Z" />
+                                </mask>
                                 <path
-                                    d="M5.10001 5C5.10001 3.89543 5.99544 3 7.10001 3H17.08C18.1846 3 19.08 3.89543 19.08 5H5.10001Z" />
-                            </mask>
-                            <path
-                                d="M5.10001 5C5.10001 2.79086 6.89087 1 9.10001 1H15.08C17.2891 1 19.08 2.79086 19.08 5C19.08 5 18.1846 5 17.08 5H7.10001C5.99544 5 5.10001 5 5.10001 5ZM19.08 5H5.10001H19.08ZM5.10001 5V3V5ZM19.08 3V5V3Z"
-                                fill="#5C5CD6" mask="url(#path-3-inside-1_1_4912)" />
-                            <mask id="path-5-inside-2_1_4912" fill="white">
+                                    d="M5.10001 5C5.10001 2.79086 6.89087 1 9.10001 1H15.08C17.2891 1 19.08 2.79086 19.08 5C19.08 5 18.1846 5 17.08 5H7.10001C5.99544 5 5.10001 5 5.10001 5ZM19.08 5H5.10001H19.08ZM5.10001 5V3V5ZM19.08 3V5V3Z"
+                                    fill="#5C5CD6" mask="url(#path-3-inside-1_1_4912)" />
+                                <mask id="path-5-inside-2_1_4912" fill="white">
+                                    <path
+                                        d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z" />
+                                </mask>
                                 <path
-                                    d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z" />
-                            </mask>
-                            <path
-                                d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z"
-                                fill="#5C5CD6" />
-                            <path
-                                d="M4.10999 8C4.10999 5.79086 5.90085 4 8.10999 4H16.08C18.2891 4 20.08 5.79086 20.08 8C20.08 8 19.1846 8 18.08 8H6.10999C5.00542 8 4.10999 8 4.10999 8ZM20.08 8H4.10999H20.08ZM4.10999 8V6V8ZM20.08 6V8V6Z"
-                                fill="#5C5CD6" mask="url(#path-5-inside-2_1_4912)" />
-                        </svg>
+                                    d="M4.10999 8C4.10999 6.89543 5.00542 6 6.10999 6H18.08C19.1846 6 20.08 6.89543 20.08 8H4.10999Z"
+                                    fill="#5C5CD6" />
+                                <path
+                                    d="M4.10999 8C4.10999 5.79086 5.90085 4 8.10999 4H16.08C18.2891 4 20.08 5.79086 20.08 8C20.08 8 19.1846 8 18.08 8H6.10999C5.00542 8 4.10999 8 4.10999 8ZM20.08 8H4.10999H20.08ZM4.10999 8V6V8ZM20.08 6V8V6Z"
+                                    fill="#5C5CD6" mask="url(#path-5-inside-2_1_4912)" />
+                            </svg>
+                        </div>
+                        <p>Katalog</p>
                     </div>
-                    <p>Katalog</p>
-                </div>
+                </button>
                 <div class="input__products__box">
                     <label>
                         <input type="search" placeholder="Mahsulotlar va turkumliklar izlash">
@@ -195,9 +198,25 @@
 
     <!-- Main Section -->
     <main>
-        <section class="swiper__container">
-            <div class="swiper page__size">
+        <!-- swiper sction -->
+        <section class="swiper__container page__size">
+            <div class="swiper">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/main_page_banner.jpg.png" alt="Reklama Banner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/main_page_banner.jpg.png" alt="Reklama Banner">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/main_page_banner.jpg.png" alt="Reklama Banner">
+                        </a>
+                    </div>
                     <div class="swiper-slide">
                         <a href="#">
                             <img src="./images/main_page_banner.jpg.png" alt="Reklama Banner">
@@ -215,16 +234,63 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev"> </div>
+                <div class="swiper-button-next"> </div>
             </div>
+        </section>
 
+        <!-- Papulyarni Section -->
+        <section class="papulyarni__section page__size">
+            <a href="#">
+                Mashhur
+                <i class='bx bx-chevron-right'></i>
+            </a>
+            <div class="papular__boxs">
+                <a href="#">
+                    <div class="popular__box">
+                        <div class="popular__image__box">
+                            <div class="image__cover"></div>
+                            <div class="image__box">
+                            </div>
+                        </div>
+                        <div class="popular__content__box">
+                            <div class="product__about__box">
+
+                            </div>
+                            <div class="degree__box">
+                                <div class="degree__value__box">
+                                    <i class='bx bxs-star'></i>
+                                    <span class="degree__value"></span>
+                                </div>
+                                <div class="comment__box">
+                                    <span class="comment__number">
+                                        (0 sharhlar)
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="old__price__box">
+                                <span class="old__price__box">
+                                    <del>55 000</del>
+                                </span>
+                            </div>
+                            <div class="new__price__box">
+                                <span class="new__price">
+                                    39 000 so'm
+                                </span>
+                            </div>
+                            <div class="shop__box"></div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </section>
 
     </main>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./styles/main.css"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>

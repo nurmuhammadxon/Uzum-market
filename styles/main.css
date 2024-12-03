@@ -288,3 +288,93 @@ main {
     width: 100%;
     height: auto;
 }
+
+/* Populyar__section stylening start */
+.papulyarni__section {
+    margin-top: 50px;
+}
+
+.title__box {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    width: max-content;
+}
+
+.title__link {
+    display: inline-block;
+    color: #1f2026;
+    font-family: "Inter", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.title__link i {
+    position: relative;
+    top: 4px;
+}
+
+.product__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product__list .product__item {
+    width: 232px;
+    height: 456.33px;
+    padding-bottom: 0.01px;
+    border-radius: 2px;
+    background: #FFFFFF;
+    transition: .3s all ease-in;
+}
+
+.product__list .product__item:hover {
+    box-shadow: 5px 5px 10px rgba(54, 55, 64, .1);
+}
+
+.product__list .product__item:hover .product__image .image__box img {
+    transform: scale(1.05);
+}
+
+.product__image {
+    width: 100%;
+    height: 310px;
+    border-radius: 12px;
+    position: relative;
+    transition: .3s all ease-in;
+    overflow: hidden;
+}
+
+.product__image .image__cover {
+    background-color: rgba(54, 55, 64, .1);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.product__image .image__box {
+    width: 100%;
+    height: 100%;
+}
+
+
+.product__image .image__box img {
+    border-radius: 8px;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all .25s;
+    will-change: transform;
+}

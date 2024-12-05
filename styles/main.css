@@ -25,6 +25,7 @@ body {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 header {
@@ -274,8 +275,14 @@ main {
 
 .swiper__container {
     width: 100%;
-    height: 100%;
+    height: auto;
     position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 413px;
+    border-radius: 20px;
 }
 
 .swiper-slide {
@@ -283,12 +290,11 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 400px;
 }
 
 .swiper-slide a img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .swiper-button-next,
@@ -316,8 +322,16 @@ main {
 }
 
 /* Populyar__section stylening start */
-.papulyarni__section {
+.popular__section {
+    height: 2112px !important;
     margin-top: 50px;
+}
+
+.carousel-offer {
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    margin: 10px auto;
 }
 
 .title__box {
@@ -351,7 +365,7 @@ main {
 }
 
 .product__list .product__item {
-    width: 232px;
+    width: 220px;
     height: auto;
     padding-bottom: 8px;
     border-radius: 12px;
@@ -499,7 +513,7 @@ main {
 }
 
 .price__box {
-    width: 216px;
+    width: 205px;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -591,4 +605,27 @@ main {
 
 .more__product__btn:hover {
     background-color: #d0d3d9;
+}
+
+.banner-wrapper {
+    margin-top: 40px;
+    margin-bottom: 36px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all .2s ease;
+}
+
+.banner-wrapper:hover .banner-image img {
+    transform: scale(1.05);
 }

@@ -1,0 +1,68 @@
+@media screen and (max-width:1024px) {
+    .account__button__label {
+        display: none;
+    }
+
+    .page__size {
+        max-width: 1000px;
+        padding: 0 10px;
+    }
+}
+
+/* Media 960px */
+
+@media screen and (max-width:960px) {
+    header .navbarBox {
+        height: 150px;
+        gap: 0;
+    }
+
+    .account__box {
+        width: 125px;
+        justify-content: start;
+        gap: 0;
+    }
+
+    .nav__list__box {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header .header-top {
+        display: none;
+    }
+
+    header .navbarBox {
+        margin-top: 5px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .uzumLogo,
+    .btn__catalog,
+    .account__box,
+    .nav__list__box {
+        display: none;
+    }
+
+    .input__products__box {
+        width: 100%;
+    }
+
+    .swiper {
+        height: 250px;
+    }
+
+    .papulyarni__section {
+        margin-top: 20px;
+    }
+
+    .product__list{
+        height: 960px;
+        overflow: hidden;
+    }
+}

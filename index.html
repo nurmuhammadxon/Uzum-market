@@ -15,6 +15,7 @@
 
     <!-- Header Section -->
     <header>
+        <div class="popus-container" id="popus-container"></div>
         <div class="header-top"></div>
         <div class="uzum">
             <div class="uzumlogo-box">
@@ -127,7 +128,7 @@
                     </span>
                 </div>
                 <div class="account__box">
-                    <button class="account__box__btn">
+                    <button class="account__box__btn" id="account-btn">
                         <i class='bx bx-user'></i>
                         <span class="account__button__label">Kirish</span>
                     </button>
@@ -135,7 +136,7 @@
                         <i class='bx bx-heart'></i>
                         <span class="account__button__label">Saralangan</span>
                     </button>
-                    <button class="account__box__btn">
+                    <button class="account__box__btn" id="karzinka">
                         <i class='bx bx-shopping-bag'></i>
                         <span class="account__button__label">Savat</span>
                     </button>
@@ -215,9 +216,9 @@
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main id="main">
         <!-- swiper sction -->
-        <section class="swiper__container page__size">
+        <section class="swiper__container page__size" id="swiper-banner">
             <div class="swiper BannerSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide bannerSwiper-slide">
@@ -569,9 +570,14 @@
                 </p>
             </div>
         </div>
+        <div class="topBox hidden">
+            <i class='bx bxs-to-top'></i>
+        </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/shop.js"></script>
+    <script src="./scripts/account.js"></script>
 </body>
 
 </html>

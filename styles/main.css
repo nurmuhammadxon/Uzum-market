@@ -17,6 +17,11 @@ a {
     text-decoration: none;
 }
 
+.hidden {
+    display: none;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -84,7 +89,7 @@ header .header-top {
     background-color: yellow;
 }
 
-.mobile__link{
+.mobile__link {
     margin-left: auto;
     display: inline-block;
     width: 114px;
@@ -792,4 +797,78 @@ main {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #4D4E59;
+}
+
+.topBox {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #7000ff;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.topBox.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.topBox i {
+    color: #fff;
+    font-style: 54px;
+}
+
+.karzinka-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.karzinka-container img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.karzinka-container .karzinka-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin-top: 24px;
+}
+
+.karzinka-container .karzinka-text {
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-top: 16px;
+}
+
+.karzinka-container .karzinka-btn {
+    background-color: #e6e8ed;
+    border-radius: 4px;
+    color: #1f2026;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    height: 38px;
+    padding: 7px 14px;
+    border: none;
 }

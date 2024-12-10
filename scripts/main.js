@@ -294,7 +294,7 @@ let swiper = new Swiper('.BannerSwiper', {
         disableOnInteraction: false,
     },
     slidesPerView: 1,
-    spaceBetween: 5,
+    spaceBetween: 6,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -350,7 +350,7 @@ function renderProducts(productList, container) {
                                <span class="new__price">${product.new__price}</span>
                            </div>
                            <div class="shop__box">
-                               <button class="shop__btn">
+                               <button class="shop__btn" onclick="shopProduct()">
                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
                                        <path
@@ -417,3 +417,16 @@ moreNavList.addEventListener('click', () => {
     `
 })
 
+const topBox = document.querySelector('.topBox');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        topBox.classList.remove('hidden');
+    } else {
+        topBox.classList.add('hidden');
+    }
+});
+
+topBox.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

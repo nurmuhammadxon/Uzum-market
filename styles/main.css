@@ -44,6 +44,59 @@ header .header-top {
     background-color: #f4f5f5;
 }
 
+.uzum {
+    display: none;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.uzumlogo-box {
+    border-radius: 8px;
+}
+
+.uzum-mobile-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile__title {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .011rem;
+    line-height: 18px;
+    color: #1f2026;
+}
+
+.mobile__text {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.006rem;
+    line-height: 16px;
+    color: #4d4f59;
+}
+
+.uzumlogo-box {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.mobile__link{
+    margin-left: auto;
+    display: inline-block;
+    width: 114px;
+    height: 32px;
+    background-color: #7000ff;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 header .navbarBox {
     width: 100%;
     height: 119px;
@@ -639,7 +692,7 @@ main {
 }
 
 .footer-list-box {
-    width: calc(1240/4);
+    width: 310px;
     height: 207px;
     display: flex;
     flex-direction: column;
@@ -664,13 +717,13 @@ main {
 }
 
 .mobile-store-box {
-    width: 100%;
     height: 24px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: self-start;
     gap: 23px;
+    flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-network-link {

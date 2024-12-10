@@ -413,6 +413,7 @@ let navbarBox = document.getElementById('navbarBox')
 moreNavList.addEventListener('click', () => {
     let moreNavListBox = document.createElement('div')
     moreNavListBox.innerHTML = `
-        
+
     `
 })
+

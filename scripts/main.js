@@ -394,6 +394,7 @@ function renderProducts(productList, container) {
         </div>
         `;
     };
+    toggleLike();
 }
 
 let more__btn = document.querySelector('.more__product__btn')
@@ -517,6 +518,7 @@ function showEmptyCart() {
     `;
 }
 
+// Savatni ko'rsatish funktsiyasi
 function showCartProducts() {
     const { kun, oyNomi } = getCurrentDate();
 
@@ -554,7 +556,7 @@ function showCartProducts() {
                     </div>
                 </div>
                 <div class="shopping__product-item">
-                    ${cart.map(item => {
+                    ${cart.map((item, index) => {
         totalPrice += item.new__price;
         return `
                     <div class="block-sm"></div>
@@ -572,7 +574,7 @@ function showCartProducts() {
                             </div>
                         <div class="cart-item-box">
                             <div class="product__image-box">
-                                <img class="product__image" src="${item.imge}">
+                                <img class="product__image-shop" src="${item.imge}">
                             </div>
                             <div class="product__about">
                                 <p class="product-text">
@@ -581,18 +583,19 @@ function showCartProducts() {
                                 <p class="product-seller product-text">Sotuvchi</p>
                             </div>
                             <div class="product__number-shop-box">
-                                <button class="noselect" id="decrement">-</button>
-                                <input class="product__number-input" type="number" value="1">
-                                <button class="noselect" id="increment">+</button>
+                                <button class="noselect decrement" data-index="${index}">-</button>
+                                <input class="product__number-input" type="number" value="1" data-index="${index}">
+                                <button class="noselect increment" data-index="${index}">+</button>
                             </div>
-                            <div>
+                            <div class="shop-product-price">
                                 <button class="product__delete__bnt">
                                     <i class='bx bx-trash'></i>
+                                    <span>Yo'q qilish</span>
                                 </button>
                                 <p class="product__newPrice">
                                     ${item.new__price}
                                 </p>
-                                <del>
+                                <del class="product__oldPrice">
                                     ${item.old__price}
                                 </del>
                             </div>
@@ -604,7 +607,34 @@ function showCartProducts() {
             </div>
         </div>
     `;
+
+    // Tugmalarga event listener qo'shish
+    document.querySelectorAll('.decrement').forEach(button => {
+        button.addEventListener('click', decrement);
+    });
+    document.querySelectorAll('.increment').forEach(button => {
+        button.addEventListener('click', increment);
+    });
 }
+
+// Sonni kamaytirish funksiyasi
+function decrement(event) {
+    const button = event.target;
+    const input = button.closest('.product__number-shop-box').querySelector('.product__number-input');
+    let value = parseInt(input.value);
+    if (value > 1) {  // Minimum qiymat 1 bo‘ladi
+        input.value = value - 1;
+    }
+}
+
+// Sonni oshirish funksiyasi
+function increment(event) {
+    const button = event.target;
+    const input = button.closest('.product__number-shop-box').querySelector('.product__number-input');
+    let value = parseInt(input.value);
+    input.value = value + 1;
+}
+
 
 function getCurrentDate() {
     const today = new Date();
@@ -661,30 +691,4 @@ document.querySelectorAll('.product__checkbox').forEach(button => {
     button.addEventListener('click', function () {
         toggleCheckbox(button);
     });
-});
-
-
-// DOM orqali qo‘shilgan tugmalarga event listenerlarni biriktirish
-document.getElementById('decrement').addEventListener('click', decrement);
-document.getElementById('increment').addEventListener('click', increment);
-
-// Sonni kamaytirish funksiyasi
-function decrement() {
-    const input = document.getElementById('quantity');
-    let value = parseInt(input.value);
-    if (value > 1) {  // Minimum qiymat 1 bo‘ladi
-        input.value = value - 1;
-    }
-}
-
-// Sonni oshirish funksiyasi
-function increment() {
-    const input = document.getElementById('quantity');
-    let value = parseInt(input.value);
-    input.value = value + 1;
-}
-
-// CSS orqali matnni belgilashni cheklash
-document.querySelectorAll('.noselect').forEach(button => {
-    button.style.userSelect = 'none'; // Matnni belgilashni o‘chiradi
 });

@@ -442,7 +442,7 @@ main {
 
 .product__image {
     width: 100%;
-    height: 310px;
+    height: 310px !important;
     border-radius: 12px;
     position: relative;
     transition: .3s all ease-in;
@@ -468,7 +468,7 @@ main {
 
 .product__image .image__box img {
     border-radius: 8px;
-    height: 100%;
+    /* height: 100%; */
     left: 0;
     object-fit: cover;
     object-position: center;
@@ -974,6 +974,7 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .cart-item-text {
@@ -995,7 +996,7 @@ main {
 
 .btn__checkbox {
     position: absolute;
-    top: 50%;
+    top: 100px;
     left: 0;
 }
 
@@ -1005,13 +1006,15 @@ main {
     margin-right: 1.15rem;
     width: 7.5rem;
     margin-left: 2rem;
+    border-radius: 8px;
 }
 
-.product__image {
+.product__image-shop {
     display: block;
     height: 100%;
     object-fit: contain;
     width: 100%;
+    border-radius: 8px;
 }
 
 .product__about {
@@ -1037,6 +1040,9 @@ main {
     text-align: center;
     display: flex;
     border: 1px solid #0000001F;
+    position: relative;
+    right: 20px;
+    top: 20px;
 }
 
 .noselect {
@@ -1048,9 +1054,49 @@ main {
     background-color: #fff;
 }
 
-.product__number-input{
+.product__number-input {
     width: 44px;
     height: 38px;
     border: none;
     text-align: center;
+}
+
+.shop-product-price {
+    width: 150px;
+    text-align: right;
+}
+
+.product__delete__bnt {
+    width: 97px;
+    height: 24px;
+    border: none;
+    background-color: #fff;
+    opacity: 0.54;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.product__delete__bnt i {
+    color: #41434d;
+}
+
+.product__delete__bnt span {
+    font-size: .85rem;
+    line-height: 1.125rem;
+    color: #4d4f59;
+}
+
+.product__newPrice {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    color: #1f2026;
+}
+
+.product__oldPrice {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    text-decoration-line: line-through;
+    color: #7e818c;
 }

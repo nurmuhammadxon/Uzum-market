@@ -10,6 +10,7 @@ let product__data = [
         old__price: "19 000 so'm",
         new__price: "14 000 so'm",
         category: ["Popular", "Uyda savdo"],
+        quantity: 1,
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ let product__data = [
         old__price: "10 000 so'm",
         new__price: "5 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 3,
@@ -34,6 +36,7 @@ let product__data = [
         old__price: "70 000 so'm",
         new__price: "57 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 4,
@@ -46,6 +49,7 @@ let product__data = [
         old__price: "26 000 so'm",
         new__price: "22 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 5,
@@ -58,6 +62,7 @@ let product__data = [
         old__price: "10 000 so'm",
         new__price: "8 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 6,
@@ -70,6 +75,7 @@ let product__data = [
         old__price: "25 000 so'm",
         new__price: "14 000 so'm",
         category: ["Popular", "Uyda savdo", "Omabob"],
+        quantity: 1,
     },
 
     {
@@ -83,6 +89,7 @@ let product__data = [
         old__price: "200 000 so'm",
         new__price: "33 000  so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 8,
@@ -95,6 +102,7 @@ let product__data = [
         old__price: "25 000 so'm",
         new__price: "16 000 so'm",
         category: ["Popular", "Uyda savdo"],
+        quantity: 1,
     },
     {
         id: 9,
@@ -107,6 +115,7 @@ let product__data = [
         old__price: "58 000 so'm",
         new__price: "55 000 so'm",
         category: ["Popular", "Omabob"],
+        quantity: 1,
     },
     {
         id: 10,
@@ -119,6 +128,7 @@ let product__data = [
         old__price: "58 000 so'm",
         new__price: "55 000 so'm",
         category: ["Popular", "Uyda savdo"],
+        quantity: 1,
     },
     {
         id: 11,
@@ -131,6 +141,7 @@ let product__data = [
         old__price: "",
         new__price: "82 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 12,
@@ -143,6 +154,7 @@ let product__data = [
         old__price: "150 000 so'm",
         new__price: "77 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 13,
@@ -155,6 +167,7 @@ let product__data = [
         old__price: "273 000 so'm",
         new__price: "175 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 14,
@@ -167,6 +180,7 @@ let product__data = [
         old__price: "4 000 so'm",
         new__price: "3 000 so'm",
         category: ["Popular", "Uyda savdo"],
+        quantity: 1,
     },
     {
         id: 15,
@@ -179,6 +193,7 @@ let product__data = [
         old__price: "85 000 so'm",
         new__price: "53 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 16,
@@ -191,6 +206,7 @@ let product__data = [
         old__price: "60 000 so'm",
         new__price: "25 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 17,
@@ -203,6 +219,7 @@ let product__data = [
         old__price: "25 000 so'm",
         new__price: "21 000 so'm",
         category: ["Popular", "Omabob"],
+        quantity: 1,
     },
     {
         id: 18,
@@ -215,6 +232,7 @@ let product__data = [
         old__price: "46 000 so'm",
         new__price: "39 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 19,
@@ -227,6 +245,7 @@ let product__data = [
         old__price: "90 000 so'm",
         new__price: "49 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 20,
@@ -239,6 +258,7 @@ let product__data = [
         old__price: "2 181 000 so'm",
         new__price: "1 762 000 so'm",
         category: ["Popular"],
+        quantity: 1,
     },
     {
         id: 21,
@@ -251,6 +271,7 @@ let product__data = [
         old__price: "",
         new__price: "310 000 so'm",
         category: ["Bo'lib to'lash", "Omabob"],
+        quantity: 1,
     },
     {
         id: 22,
@@ -263,6 +284,7 @@ let product__data = [
         old__price: "499 000 so'm",
         new__price: "299 000 so'm",
         category: ["Bo'lib to'lash"],
+        quantity: 1,
     },
     {
         id: 23,
@@ -275,6 +297,7 @@ let product__data = [
         old__price: "301 000 so'm",
         new__price: "198 000 so'm",
         category: ["Bo'lib to'lash"],
+        quantity: 1,
     },
     {
         id: 24,
@@ -287,6 +310,7 @@ let product__data = [
         old__price: "107 000 so'm",
         new__price: "72 000 so'm",
         category: ["Bo'lib to'lash"],
+        quantity: 1,
     },
     {
         id: 25,
@@ -299,6 +323,7 @@ let product__data = [
         old__price: "250 000 so'm",
         new__price: "81 000 so'm",
         category: ["Bo'lib to'lash"],
+        quantity: 1,
     },
     {
         id: 26,
@@ -311,6 +336,7 @@ let product__data = [
         old__price: "39 000 so'm",
         new__price: "20 000 so'm",
         category: ["Omabob"],
+        quantity: 1,
     },
 ]
 
@@ -467,14 +493,17 @@ let karzinkaBox = document.createElement('div');
 karzinkaBox.classList.add('karzinka-container');
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-console.log(cart);
-
 
 function shopProduct(productId) {
     const product = product__data.find(item => item.id === productId);
 
     if (product) {
-        cart.push(product);
+        const existingProduct = cart.find(item => item.id === productId);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push({ ...product, quantity: 1 });
+        }
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartUI();
     } else {
@@ -483,13 +512,12 @@ function shopProduct(productId) {
 }
 
 function updateCartUI() {
-    const cartContainer = document.querySelector('.cart__container');
-    cartContainer.innerHTML = '';
+    karzinkaBox.innerHTML = '';
 
     if (cart.length === 0) {
-        showEmptyCart()
+        showEmptyCart();
     } else {
-        showCartProducts()
+        showCartProducts();
     }
 }
 
@@ -499,142 +527,95 @@ function removeFromCart(index) {
     updateCartUI();
 }
 
-document.addEventListener('DOMContentLoaded', updateCartUI);
-
 function showEmptyCart() {
     karzinkaBox.innerHTML = `
         <div class="karzinka-container">
             <img src="./Images/uzumContainer/mushuk.png" alt="Savat bo'sh">
-            <h2 class="karzinka-title">
-                Savatingiz hozircha bo‘sh
-            </h2>
-            <p class="karzinka-text">
-                Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to‘plamlarni ko‘rishingiz mumkin
-            </p>
-            <button class="karzinka-btn">
-                Bosh sahifa
-            </button>
+            <h2 class="karzinka-title">Savatingiz hozircha bo‘sh</h2>
+            <p class="karzinka-text">Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to‘plamlarni ko‘rishingiz mumkin</p>
+            <button class="karzinka-btn">Bosh sahifa</button>
         </div>
     `;
 }
 
-// Savatni ko'rsatish funktsiyasi
 function showCartProducts() {
     const { kun, oyNomi } = getCurrentDate();
-
-    if (cart.length === 0) {
-        showEmptyCart();
-        return;
-    }
-
     let totalPrice = 0;
 
     karzinkaBox.innerHTML = `
-        <div class="shopping__product-box page__size">
-            <div class="my__product">
-                <h2 class="my__product-title">
-                    Savatingizda, 
-                    <span class="my__product__theNumber">${cart.length}</span> 
-                    <span class="my__product__theNumber">mahsulot</span> 
-                </h2>
-            </div>
-            <div class="product__shop-box">
-                <div class="shopping__product-title-box">
-                    <div class="more__product">
-                        <button class="product__all__checkbox product__checkbox">
-                            <i class='bx bx-check'></i>
-                        </button>
-                        <p class="checkbox-text">Hammasini yechish</p>
-                    </div>
-                    <div class="more__product">
-                        <p class="delivery-text">
-                            Yetkazib berishning eng yaqin sanasi:
-                        </p>
-                        <span class="delivery-date-box">
-                            ${kun + 1}-${oyNomi}
-                        </span>
-                    </div>
+        <div class="my__product-box">
+            <div class="shopping__product-box page__size">
+                <div class="my__product">
+                    <h2 class="my__product-title">
+                        Savatingizda, <span class="my__product__theNumber">${cart.length} mahsulot</span> 
+                    </h2>
                 </div>
-                <div class="shopping__product-item">
-                    ${cart.map((item, index) => {
-        totalPrice += item.new__price;
+                <div class="product__shop-box">
+                    <div class="shopping__product-item">
+                        ${cart.map((item, index) => {
+        totalPrice += parseFloat(item.new__price) * (item.quantity || 1);
         return `
-                    <div class="block-sm"></div>
-                    <div class="cart-item">
-                        <div class="cart-item-box">
-                            <span>
-                                <p class="cart-item-text">Uzum Market omborida</p>
-                                <p class="cart-item-date">
-                                ${kun + 1}-${oyNomi}dan boshlab yetkazamiz
-                                </p>
-                            </span>
-                            <button class="product__checkbox btn__checkbox" onclick="toggleCheckbox(this)">
-                                <i class='bx bx-check'></i>
-                            </button>
+                        <div class="cart-item">
+                            <div class="cart-item-box">
+                                <span>
+                                    <p class="cart-item-text">Uzum Market omborida</p>
+                                    <p class="cart-item-date">${kun + 1}-${oyNomi}dan boshlab yetkazamiz</p>
+                                </span>
                             </div>
-                        <div class="cart-item-box">
-                            <div class="product__image-box">
-                                <img class="product__image-shop" src="${item.imge}">
-                            </div>
-                            <div class="product__about">
-                                <p class="product-text">
-                                    ${item.product__content}
-                                </p>
-                                <p class="product-seller product-text">Sotuvchi</p>
-                            </div>
-                            <div class="product__number-shop-box">
-                                <button class="noselect decrement" data-index="${index}">-</button>
-                                <input class="product__number-input" type="number" value="1" data-index="${index}">
-                                <button class="noselect increment" data-index="${index}">+</button>
-                            </div>
-                            <div class="shop-product-price">
-                                <button class="product__delete__bnt">
+                            <div class="cart-item-box">
+                                <div class="product__image-box">
+                                    <img class="product__image-shop" src="${item.imge}">
+                                </div>
+                                <div class="product__about">
+                                    <p class="product-text">${item.product__content}</p>
+                                    <p class="product-seller product-text">Sotuvchi</p>
+                                </div>
+                                <div class="product__number-shop-box">
+                                    <button class="noselect decrement" data-index="${index}">-</button>
+                                    <input class="product__number-input" type="number" value="${item.quantity}" data-index="${index}">
+                                    <button class="noselect increment" data-index="${index}">+</button>
+                                </div>
+                                <div class="shop-product-price">
+                                    <button class="product__delete__bnt" data-index="${index}">
                                     <i class='bx bx-trash'></i>
                                     <span>Yo'q qilish</span>
-                                </button>
-                                <p class="product__newPrice">
-                                    ${item.new__price}
-                                </p>
-                                <del class="product__oldPrice">
-                                    ${item.old__price}
-                                </del>
+                                    </button>
+                                    <p class="product__newPrice">${item.new__price}</p>
+                                    <del class="product__oldPrice">${item.old__price}</del>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                            `;
+                        `;
     }).join('')}
+                    </div>
+                </div>
+            </div>
+            <div class="clearance__box">
+                <h3 class="clearance__title">Buyurtmangiz</h3>
+                <div class="clearance__price-box">
+                    <span>Mahsulotlar (${cart.length})</span>
+                    <span>${totalPrice} 000 so'm</span>
+                </div>
+                <div class="deliver-box">
+                    <p class="deliver-date">${kun + 1}-${oyNomi}dan boshlab yetkazamiz</p>
+                </div>
+                <div class="total-price-box">
+                    <span class="total-price-text">
+                        Umumiy narx:
+                    </span>
+                    <span class="total-price">
+                        ${totalPrice} 000 so'm
+                    </span>
+                </div>
+                <div class="clearance__btn-box">
+                    <button class="clearance__btn">
+                        Buyurtmani rasmiylashtirish
+                    </button>
                 </div>
             </div>
         </div>
     `;
-
-    // Tugmalarga event listener qo'shish
-    document.querySelectorAll('.decrement').forEach(button => {
-        button.addEventListener('click', decrement);
-    });
-    document.querySelectorAll('.increment').forEach(button => {
-        button.addEventListener('click', increment);
-    });
 }
-
-// Sonni kamaytirish funksiyasi
-function decrement(event) {
-    const button = event.target;
-    const input = button.closest('.product__number-shop-box').querySelector('.product__number-input');
-    let value = parseInt(input.value);
-    if (value > 1) {  // Minimum qiymat 1 bo‘ladi
-        input.value = value - 1;
-    }
-}
-
-// Sonni oshirish funksiyasi
-function increment(event) {
-    const button = event.target;
-    const input = button.closest('.product__number-shop-box').querySelector('.product__number-input');
-    let value = parseInt(input.value);
-    input.value = value + 1;
-}
-
 
 function getCurrentDate() {
     const today = new Date();
@@ -651,14 +632,12 @@ function getCurrentDate() {
     return { kun, oyNomi, yil };
 }
 
-
-
 karzinkaBtn.addEventListener('click', () => {
     swiperBannerBox.classList.add('hidden');
     if (!main.contains(karzinkaBox)) {
         main.prepend(karzinkaBox);
     }
-    showCartProducts();
+    updateCartUI();
 });
 
 karzinkaBox.addEventListener('click', (e) => {
@@ -667,28 +646,48 @@ karzinkaBox.addEventListener('click', (e) => {
         karzinkaBox.remove();
     }
 
-    if (e.target.classList.contains('remove-btn')) {
-        const id = e.target.getAttribute('data-id');
-        removeFromCart(id);
+    if (e.target.closest('.product__delete__bnt')) {
+        const index = e.target.closest('.product__delete__bnt').getAttribute('data-index');
+        removeFromCart(index);
+    }
+
+    if (e.target.classList.contains('increment')) {
+        const index = e.target.getAttribute('data-index');
+        cart[index].quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartUI();
+    }
+
+    if (e.target.classList.contains('decrement')) {
+        const index = e.target.getAttribute('data-index');
+        cart[index].quantity = Math.max(0, cart[index].quantity - 1);
+
+        if (cart[index].quantity === 0) {
+            cart.splice(index, 1);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartUI();
+    }
+
+});
+
+karzinkaBox.addEventListener('input', (e) => {
+    if (e.target.classList.contains('product__number-input')) {
+        const index = e.target.getAttribute('data-index');
+        const value = parseInt(e.target.value, 10) || 1;
+        cart[index].quantity = Math.max(1, value);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartUI();
     }
 });
 
-document.querySelector('.shopping__product-item').addEventListener('click', function (event) {
-    if (event.target.classList.contains('product__checkbox')) {
-        toggleCheckbox(event.target);
-    }
-});
+document.addEventListener('DOMContentLoaded', updateCartUI);
 
-function toggleCheckbox(button) {
-    if (button.classList.contains('checkboxHidden')) {
-        button.classList.remove('checkboxHidden');
-    } else {
-        button.classList.add('checkboxHidden');
-    }
-}
+let accountBtn = document.getElementById('account-btn')
 
-document.querySelectorAll('.product__checkbox').forEach(button => {
-    button.addEventListener('click', function () {
-        toggleCheckbox(button);
-    });
-});
+
+accountBtn.addEventListener('click', () => {
+    window.open('./account.html')
+    window.close()
+})

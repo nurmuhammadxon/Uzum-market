@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish</title>
+    <link rel="stylesheet" href="./styles/account.css">
+</head>
+
+<body>
+
+    <div class="back-box">
+        <button class="back-btn" id="back-btn">
+            Asosiy sahifaga o'tish
+        </button>
+    </div>
+
+    <div class="container">
+        <div id="login" class="form-container active">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="handleLogin()">Login</button>
+            <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account? Sign Up</div>
+        </div>
+        <div id="signup" class="form-container">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="handleSignUp()">Sign Up</button>
+            <div class="toggle-link" onclick="toggleForm('login')">Already have an account? Login</div>
+        </div>
+    </div>
+
+    <script src="./scripts/account.js"></script>
+</body>
+
+</html>

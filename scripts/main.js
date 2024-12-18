@@ -360,6 +360,19 @@ let swiper = new Swiper('.BannerSwiper', {
 
 let n = 10
 
+function toggleLike() {
+    const heartButtons = document.querySelectorAll('.heart__btn');
+
+    heartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const hearts = button.querySelectorAll('.heart');
+            hearts.forEach(heart => {
+                heart.classList.toggle('heart__hidden');
+            });
+        });
+    });
+}
+
 function renderProducts(productList, container) {
     container.innerHTML = '';
     for (let i = 0; i < n; i++) {
@@ -373,8 +386,10 @@ function renderProducts(productList, container) {
                     <img src="${product.imge}" alt="${product.image__alt}">
                 </div>
                 <div class="heart__box">
-                    <i class='bx bx-heart heart'></i>
-                    <i class='bx bxs-heart heart heart__hidden'></i>
+                   <button class="heart__btn" onclick="likeProduct(${product.id})">
+                        <i class='bx bx-heart heart'></i>
+                        <i class='bx bxs-heart heart heart__hidden'></i>
+                   </button>
                 </div>
             </div>
             <div class="product__content__box">
@@ -430,17 +445,6 @@ more__btn.addEventListener('click', () => {
     renderProducts(product__data, productListContainer);
 });
 
-function toggleLike() {
-    document.querySelectorAll('.heart__box').forEach(heartBox => {
-        heartBox.addEventListener('click', () => {
-            const heart = heartBox.querySelector('.bx-heart');
-            const heartLike = heartBox.querySelector('.bxs-heart');
-            heart.classList.toggle('heart__hidden');
-            heartLike.classList.toggle('heart__hidden');
-        });
-    });
-}
-
 const productListContainer = document.querySelector('.product__list');
 renderProducts(product__data, productListContainer);
 toggleLike();
@@ -467,7 +471,6 @@ let navbarBox = document.getElementById('navbarBox')
 moreNavList.addEventListener('click', () => {
     let moreNavListBox = document.createElement('div')
     moreNavListBox.innerHTML = `
-
     `
 })
 
@@ -485,13 +488,134 @@ topBox.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-
-const main = document.getElementById('main');
-const karzinkaBtn = document.getElementById('karzinka');
+const LikeProductBtn = document.getElementById('likeProducts-btn')
 const swiperBannerBox = document.getElementById('swiper-banner');
-let karzinkaBox = document.createElement('div');
-karzinkaBox.classList.add('karzinka-container');
+const main = document.getElementById('main');
+let LikeProductsBox = document.createElement('div')
+LikeProductsBox.classList.add('products-container');
 
+const karzinkaBtn = document.getElementById('karzinka');
+let karzinkaBox = document.createElement('div');
+karzinkaBox.classList.add('products-container');
+
+let LikeProducts = JSON.parse(localStorage.getItem('LikeProducts')) || [];
+
+function likeProduct(productId) {
+    const product = product__data.find(item => item.id === productId);
+
+    if (product) {
+        const existingProduct = cart.find(item => item.id === productId);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            LikeProducts.push({ ...product, quantity: 1 });
+        }
+        localStorage.setItem('LikeProducts', JSON.stringify(LikeProducts));
+        updateCartUI();
+    } else {
+        alert("Mahsulot topilmadi!");
+    }
+}
+
+function showEmptyLikeProductsUI() {
+    LikeProductsBox.innerHTML = `
+        <div class="products-container">
+            <img src="./Images/uzumContainer/Like.png" alt="Like list bo'sh">
+            <h2 class="product-title">Sizga yoqqanini qo'shing</h2>
+            <p class="product-text">Mahsulotdagi ♡ belgisini bosing. Akkauntga kiring va barcha saralanganlar saqlanib qoladi</p>
+            <button class="product-btn" id="account__open">Akkauntga kirish</button>
+        </div>
+    `;
+}
+
+function showLikeProduct() {
+    LikeProductsBox.innerHTML = ''
+    LikeProductsBox.innerHTML = `
+        <div class="likeProduct-box page__size">
+             ${LikeProducts.map((product, index) => {
+        return `
+        <div class="product__item">
+            <div class="product__image">
+                <div class="image__cover"></div>
+                <div class="image__box">
+                    <img src="${product.imge}" alt="${product.image__alt}">
+                </div>
+                <div class="heart__box">
+                   <button class="heart__btn" onclick="likeProduct(${product.id})">
+                        <i class='bx bx-heart heart'></i>
+                        <i class='bx bxs-heart heart heart__hidden'></i>
+                   </button>
+                </div>
+            </div>
+            <div class="product__content__box">
+                <div class="product__about__box">
+                    <p class="conten__text">${product.product__content}</p>
+                </div>
+                <div class="degree__box">
+                    <div class="degree__value__box">
+                        <i class='bx bxs-star'></i>
+                        <span class="degree__value">${product.degree}</span>
+                    </div>
+                    <div class="comment__box">
+                        <span class="comment__number">
+                            (${product.comment} sharhlar)
+                        </span>
+                    </div>
+                </div>
+                <div class="installment__payment__box">
+                    <span class="installment__payment">${product.installmentPayment}</span>
+                </div>
+                 <div class="price__box">
+                           <div class="product__price">
+                               <span class="old__price">
+                                   <del>${product.old__price}</del>
+                               </span>
+                               <span class="new__price">${product.new__price}</span>
+                           </div>
+                           <div class="shop__box">
+                               <button class="shop__btn" onclick="shopProduct(${product.id})">
+                                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                           d="M8 10.3401V8.34009H6V12.8401C6 13.1162 5.77614 13.3401 5.5 13.3401C5.22386 13.3401 5 13.1162 5 12.8401V7.34009H8C8 4.93637 9.95227 3.34009 12 3.34009C14.0575 3.34009 16 5.04565 16 7.34009H19V19.8401C19 20.6685 18.3284 21.3401 17.5 21.3401H12.5C12.2239 21.3401 12 21.1162 12 20.8401C12 20.564 12.2239 20.3401 12.5 20.3401H17.5C17.7761 20.3401 18 20.1162 18 19.8401V8.34009H16V10.3401H15V8.34009H9V10.3401H8ZM12 4.34009C10.4477 4.34009 9 5.54381 9 7.34009H15C15 5.63453 13.5425 4.34009 12 4.34009Z"
+                                           fill="#15151A" />
+                                       <path
+                                           d="M7.5 14.3401C7.77614 14.3401 8 14.564 8 14.8401V17.3401H10.5C10.7761 17.3401 11 17.564 11 17.8401C11 18.1162 10.7761 18.3401 10.5 18.3401H8V20.8401C8 21.1162 7.77614 21.3401 7.5 21.3401C7.22386 21.3401 7 21.1162 7 20.8401V18.3401H4.5C4.22386 18.3401 4 18.1162 4 17.8401C4 17.564 4.22386 17.3401 4.5 17.3401H7V14.8401C7 14.564 7.22386 14.3401 7.5 14.3401Z"
+                                           fill="#15151A" />
+                                   </svg>
+                               </button>
+                           </div>
+                       </div>
+            </div>
+        </div>
+                `;
+    }).join('')} 
+        </div>
+    `
+    toggleLike()
+}
+
+function updateLikeProductsUI() {
+    LikeProductsBox.innerHTML = '';
+
+    if (LikeProducts.length === 0) {
+        showEmptyLikeProductsUI()
+    } else {
+        showLikeProduct(LikeProducts, LikeProductsBox)
+    }
+}
+
+LikeProductBtn.addEventListener('click', () => {
+    swiperBannerBox.classList.add('hidden');
+    karzinkaBox.remove()
+    LikeProductsBox.innerHTML = ''
+    if (!main.contains(LikeProductsBox)) {
+        main.prepend(LikeProductsBox);
+    }
+    updateLikeProductsUI();
+});
+
+// Savatcha qismi
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function shopProduct(productId) {
@@ -529,11 +653,11 @@ function removeFromCart(index) {
 
 function showEmptyCart() {
     karzinkaBox.innerHTML = `
-        <div class="karzinka-container">
-            <img src="./Images/uzumContainer/mushuk.png" alt="Savat bo'sh">
-            <h2 class="karzinka-title">Savatingiz hozircha bo‘sh</h2>
-            <p class="karzinka-text">Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to‘plamlarni ko‘rishingiz mumkin</p>
-            <button class="karzinka-btn">Bosh sahifa</button>
+         <div class="products-container">
+            <img src="./Images/uzumContainer/mushuk.png" alt="Like list bo'sh">
+            <h2 class="product-title">Savatingiz hozircha bo‘sh</h2>
+            <p class="product-text">Bosh sahifadan boshlang — kerakli tovarni qidiruv orqali topishingiz yoki to‘plamlarni ko‘rishingiz mumkin</p>
+            <button class="product-btn home__page">Bosh sahifa</button>
         </div>
     `;
 }
@@ -634,6 +758,8 @@ function getCurrentDate() {
 
 karzinkaBtn.addEventListener('click', () => {
     swiperBannerBox.classList.add('hidden');
+    karzinkaBox.innerHTML = ''
+    LikeProductsBox.remove()
     if (!main.contains(karzinkaBox)) {
         main.prepend(karzinkaBox);
     }
@@ -641,7 +767,7 @@ karzinkaBtn.addEventListener('click', () => {
 });
 
 karzinkaBox.addEventListener('click', (e) => {
-    if (e.target.classList.contains('karzinka-btn')) {
+    if (e.target.classList.contains('home__page')) {
         swiperBannerBox.classList.remove('hidden');
         karzinkaBox.remove();
     }
@@ -685,7 +811,6 @@ karzinkaBox.addEventListener('input', (e) => {
 document.addEventListener('DOMContentLoaded', updateCartUI);
 
 let accountBtn = document.getElementById('account-btn')
-
 
 accountBtn.addEventListener('click', () => {
     window.open('./account.html')

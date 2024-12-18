@@ -1,3 +1,4 @@
+
 function toggleForm(form) {
     document.getElementById('signup').classList.remove('active');
     document.getElementById('login').classList.remove('active');

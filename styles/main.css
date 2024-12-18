@@ -420,7 +420,7 @@ main {
     transition: all .3s ease;
 }
 
-.product__list .product__item {
+.product__item {
     width: 220px;
     padding-bottom: 8px;
     border-radius: 12px;
@@ -429,11 +429,11 @@ main {
     cursor: pointer;
 }
 
-.product__list .product__item:hover {
+.product__item:hover {
     box-shadow: 5px 5px 10px rgba(54, 55, 64, .1);
 }
 
-.product__list .product__item:hover .product__image .image__box img {
+.product__item:hover .product__image .image__box img {
     transform: scale(1.05);
 }
 
@@ -462,16 +462,15 @@ main {
     height: 100%;
 }
 
-
 .product__image .image__box img {
     border-radius: 8px;
-    /* height: 100%; */
     left: 0;
     object-fit: cover;
     object-position: center;
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     transition: all .25s;
     will-change: transform;
 }
@@ -483,6 +482,12 @@ main {
     top: 12px;
     right: 9px;
     z-index: 10;
+}
+
+.heart__btn {
+    border: none;
+    background-color: initial;
+    cursor: pointer;
 }
 
 .heart__box .heart__hidden {
@@ -644,6 +649,7 @@ main {
     justify-content: center;
     background: #76797F1A;
     transition: all .3s;
+    cursor: pointer;
 }
 
 .more__product__btn .more__product__text {
@@ -823,7 +829,7 @@ main {
     font-style: 54px;
 }
 
-.karzinka-container {
+.products-container {
     max-width: 100%;
     width: 100%;
     margin: 50px auto;
@@ -834,14 +840,14 @@ main {
     gap: 10px;
 }
 
-.karzinka-container img {
+.products-container img {
     width: 128px;
     height: 128px;
     object-fit: cover;
     object-position: center;
 }
 
-.karzinka-container .karzinka-title {
+.products-container .product-title {
     font-family: 'Inter', sans-serif;
     font-size: 1.375rem;
     font-weight: 600;
@@ -849,7 +855,7 @@ main {
     margin-top: 24px;
 }
 
-.karzinka-container .karzinka-text {
+.products-container .product-text {
     font-family: 'Inter', sans-serif;
     font-size: .8rem;
     font-weight: 400;
@@ -857,7 +863,7 @@ main {
     margin-top: 16px;
 }
 
-.karzinka-container .karzinka-btn {
+.products-container .product-btn {
     background-color: #e6e8ed;
     border-radius: 4px;
     color: #1f2026;
@@ -942,8 +948,13 @@ main {
     margin-left: 5px;
 }
 
+.shopping__product-item {
+    width: 100%;
+}
+
 .cart-item {
     max-width: 700px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1179,3 +1190,9 @@ main {
     cursor: pointer;
 }
 
+.likeProduct-box {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}

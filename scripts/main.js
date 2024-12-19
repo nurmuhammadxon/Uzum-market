@@ -11,6 +11,7 @@ let product__data = [
         new__price: "14 000 so'm",
         category: ["Popular", "Uyda savdo"],
         quantity: 1,
+        like: false,
     },
     {
         id: 2,
@@ -24,6 +25,7 @@ let product__data = [
         new__price: "5 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 3,
@@ -37,6 +39,7 @@ let product__data = [
         new__price: "57 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 4,
@@ -50,6 +53,7 @@ let product__data = [
         new__price: "22 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 5,
@@ -63,6 +67,7 @@ let product__data = [
         new__price: "8 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 6,
@@ -76,6 +81,7 @@ let product__data = [
         new__price: "14 000 so'm",
         category: ["Popular", "Uyda savdo", "Omabob"],
         quantity: 1,
+        like: false,
     },
 
     {
@@ -90,6 +96,7 @@ let product__data = [
         new__price: "33 000  so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 8,
@@ -103,6 +110,7 @@ let product__data = [
         new__price: "16 000 so'm",
         category: ["Popular", "Uyda savdo"],
         quantity: 1,
+        like: false,
     },
     {
         id: 9,
@@ -116,6 +124,7 @@ let product__data = [
         new__price: "55 000 so'm",
         category: ["Popular", "Omabob"],
         quantity: 1,
+        like: false,
     },
     {
         id: 10,
@@ -129,6 +138,7 @@ let product__data = [
         new__price: "55 000 so'm",
         category: ["Popular", "Uyda savdo"],
         quantity: 1,
+        like: false,
     },
     {
         id: 11,
@@ -142,6 +152,7 @@ let product__data = [
         new__price: "82 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 12,
@@ -155,6 +166,7 @@ let product__data = [
         new__price: "77 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 13,
@@ -168,6 +180,7 @@ let product__data = [
         new__price: "175 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 14,
@@ -181,6 +194,7 @@ let product__data = [
         new__price: "3 000 so'm",
         category: ["Popular", "Uyda savdo"],
         quantity: 1,
+        like: false,
     },
     {
         id: 15,
@@ -194,6 +208,7 @@ let product__data = [
         new__price: "53 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 16,
@@ -207,6 +222,7 @@ let product__data = [
         new__price: "25 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 17,
@@ -220,6 +236,7 @@ let product__data = [
         new__price: "21 000 so'm",
         category: ["Popular", "Omabob"],
         quantity: 1,
+        like: false,
     },
     {
         id: 18,
@@ -233,6 +250,7 @@ let product__data = [
         new__price: "39 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 19,
@@ -246,6 +264,7 @@ let product__data = [
         new__price: "49 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 20,
@@ -259,6 +278,7 @@ let product__data = [
         new__price: "1 762 000 so'm",
         category: ["Popular"],
         quantity: 1,
+        like: false,
     },
     {
         id: 21,
@@ -272,6 +292,7 @@ let product__data = [
         new__price: "310 000 so'm",
         category: ["Bo'lib to'lash", "Omabob"],
         quantity: 1,
+        like: false,
     },
     {
         id: 22,
@@ -285,6 +306,7 @@ let product__data = [
         new__price: "299 000 so'm",
         category: ["Bo'lib to'lash"],
         quantity: 1,
+        like: false,
     },
     {
         id: 23,
@@ -298,6 +320,7 @@ let product__data = [
         new__price: "198 000 so'm",
         category: ["Bo'lib to'lash"],
         quantity: 1,
+        like: false,
     },
     {
         id: 24,
@@ -311,6 +334,7 @@ let product__data = [
         new__price: "72 000 so'm",
         category: ["Bo'lib to'lash"],
         quantity: 1,
+        like: false,
     },
     {
         id: 25,
@@ -324,6 +348,7 @@ let product__data = [
         new__price: "81 000 so'm",
         category: ["Bo'lib to'lash"],
         quantity: 1,
+        like: false,
     },
     {
         id: 26,
@@ -337,6 +362,7 @@ let product__data = [
         new__price: "20 000 so'm",
         category: ["Omabob"],
         quantity: 1,
+        like: false,
     },
 ]
 
@@ -361,16 +387,19 @@ let swiper = new Swiper('.BannerSwiper', {
 let n = 10
 
 function toggleLike() {
-    const heartButtons = document.querySelectorAll('.heart__btn');
-
-    heartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const hearts = button.querySelectorAll('.heart');
-            hearts.forEach(heart => {
-                heart.classList.toggle('heart__hidden');
+     product__data.forEach((item) => {
+        const heartButtons = document.querySelectorAll('.heart__btn');
+        heartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const hearts = button.querySelectorAll('.heart');
+                hearts.forEach(heart => {
+                    if (!item.like) {
+                        heart.classList.toggle('heart__hidden');
+                    }
+                });
             });
         });
-    });
+    })
 }
 
 function renderProducts(productList, container) {
@@ -386,7 +415,7 @@ function renderProducts(productList, container) {
                     <img src="${product.imge}" alt="${product.image__alt}">
                 </div>
                 <div class="heart__box">
-                   <button class="heart__btn" onclick="likeProduct(${product.id})">
+                   <button class="heart__btn" onclick="likeProduct(${product.id})" data-product-id="${product.id}">
                         <i class='bx bx-heart heart'></i>
                         <i class='bx bxs-heart heart heart__hidden'></i>
                    </button>
@@ -504,14 +533,20 @@ function likeProduct(productId) {
     const product = product__data.find(item => item.id === productId);
 
     if (product) {
-        const existingProduct = cart.find(item => item.id === productId);
-        if (existingProduct) {
-            existingProduct.quantity += 1;
-        } else {
+        if (product.like) {
+            alert("Bu mahsulot allaqachon 'yoqilgan'!");
+            return;
+        }
+
+        product.like = true;
+
+        const existingProduct = LikeProducts.find(item => item.id === productId);
+        if (!existingProduct) {
             LikeProducts.push({ ...product, quantity: 1 });
         }
+
         localStorage.setItem('LikeProducts', JSON.stringify(LikeProducts));
-        updateCartUI();
+        updateLikeProductsUI();
     } else {
         alert("Mahsulot topilmadi!");
     }

@@ -1200,3 +1200,10 @@ main {
     display: flex;
     gap: 10px;
 }
+
+.likeProduct-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}

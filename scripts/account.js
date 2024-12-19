@@ -1,3 +1,4 @@
+let loginList = JSON.parse(localStorage.getItem('loginList')) || [];
 
 function toggleForm(form) {
     document.getElementById('signup').classList.remove('active');
@@ -11,6 +12,15 @@ function handleSignUp() {
     const password = document.getElementById('signup-password').value;
 
     if (username && email && password) {
+        const user = {
+            username: username,
+            email: email,
+            password: password
+        };
+
+        loginList.push(user);
+        localStorage.setItem('loginList', JSON.stringify(loginList));
+
         alert(`Roʻyxatdan oʻtdingiz!\nFoydalanuvchi nomi: ${username}\nEmail: ${email}`);
         toggleForm('login');
     } else {
@@ -23,15 +33,38 @@ function handleLogin() {
     const password = document.getElementById('login-password').value;
 
     if (email && password) {
-        alert(`Kirish muvaffaqiyatli amalga oshirildi!\nEmail: ${email}`);
+        const user = loginList.find(u => u.email === email && u.password === password);
+
+        if (user) {
+
+            const accountLabel = document.querySelector('.account__button__label');
+            if (accountLabel) {
+                accountLabel.textContent = user.username;
+            }
+
+            window.location.href = './index.html';
+        } else {
+            alert("Foydalanuvchi topilmadi yoki parol noto'g'ri");
+        }
     } else {
         alert("Ma'lumotlarni to'liq kiriting");
     }
 }
 
-let backBtn = document.getElementById('back-btn')
+let backBtn = document.getElementById('back-btn');
+if (backBtn) {
+    backBtn.addEventListener('click', () => {
+        window.location.href = './index.html';
+    });
+}
 
-backBtn.addEventListener('click', () => {
-    window.open('./index.html')
-    window.close()
-})
+window.onload = function () {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (loggedInUser) {
+        const accountLabel = document.querySelector('.account__button__label');
+        if (accountLabel) {
+            accountLabel.textContent = loggedInUser.username;
+        }
+    }
+};
+

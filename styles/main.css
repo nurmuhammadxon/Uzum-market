@@ -717,6 +717,10 @@ main {
     color: #4D4E59;
 }
 
+.footer-item-link:hover {
+    color: #1f2026;
+}
+
 .footer-title-link {
     font-size: 14px;
     font-weight: 500;

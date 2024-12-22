@@ -15,25 +15,7 @@
 
     <!-- Header Section -->
     <header>
-        <div class="popus-container" id="popus-container"></div>
         <div class="header-top"></div>
-        <div class="uzum">
-            <div class="uzumlogo-box">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M31.9896 16.0053C31.9889 19.1704 31.0498 22.2643 29.2912 24.8955C27.5326 27.5268 25.0334 29.5772 22.1098 30.7875C19.1861 31.9978 15.9693 32.3135 12.8663 31.6949C9.76323 31.0762 6.91329 29.5508 4.67692 27.3117C2.44055 25.0726 0.918218 22.2204 0.302472 19.1158C-0.313274 16.0111 0.00522363 12.7936 1.21768 9.87001C2.43014 6.94646 4.4821 4.44826 7.11402 2.6914C9.74594 0.934529 12.8396 -0.00208978 16.0037 3.5011e-06C18.1047 -0.000924639 20.1854 0.412484 22.1266 1.21658C24.0679 2.02068 25.8316 3.1997 27.317 4.68621C28.8023 6.17271 29.9802 7.93754 30.7831 9.87977C31.5861 11.822 31.9985 13.9035 31.9966 16.0053H31.9896ZM17.8304 5.5597C17.2309 5.50326 16.6173 5.47856 15.9966 5.47856C15.3759 5.47856 14.7658 5.50326 14.1663 5.5597V14.0933H17.8304V5.5597ZM26.2942 10.5338C24.9588 10.0949 23.5942 9.7507 22.2104 9.5037V16.672C22.2104 21.8296 20.0239 24.5424 15.9931 24.5424C11.9622 24.5424 9.78284 21.8296 9.78284 16.672V9.5037C8.39803 9.75113 7.03226 10.0953 5.69556 10.5338V16.7108C5.67024 18.0799 5.91792 19.4402 6.42414 20.7124C6.93035 21.9845 7.68495 23.143 8.64384 24.1201C9.60273 25.0973 10.7467 25.8734 12.0088 26.4033C13.271 26.9331 14.6261 27.206 15.9949 27.206C17.3637 27.206 18.7187 26.9331 19.9809 26.4033C21.2431 25.8734 22.387 25.0973 23.3459 24.1201C24.3048 23.143 25.0594 21.9845 25.5656 20.7124C26.0718 19.4402 26.3195 18.0799 26.2942 16.7108V10.5338Z"
-                        fill="#7000FF" />
-                </svg>
-            </div>
-            <div class="uzum-mobile-text-box">
-                <h3 class="mobile__title">Uzum Market</h3>
-                <p class="mobile__text">Ilovani yuklab olish</p>
-            </div>
-            <a class="mobile__link" href="#">
-                Yuklab Olish
-            </a>
-            <p></p>
-        </div>
         <nav class="navbarBox page__size" id="navbarBox">
             <div class="nav__wrapper">
                 <div class="uzumLogo">
@@ -121,9 +103,9 @@
                 </button>
                 <div class="input__products__box">
                     <label>
-                        <input type="search" placeholder="Mahsulotlar va turkumliklar izlash">
+                        <input type="search" id="search" placeholder="Mahsulotlar va turkumliklar izlash">
                     </label>
-                    <span class="search-icon">
+                    <span class="search-icon" id="search-icon">
                         <i class='bx bx-search-alt-2'></i>
                     </span>
                 </div>
@@ -217,6 +199,10 @@
 
     <!-- Main Section -->
     <main id="main">
+        <!-- search product section -->
+        <section class="search-product-container page__size">
+            <div class="search-product-results" id="search-product-results"></div>
+        </section>
         <!-- swiper sction -->
         <section class="swiper__container page__size" id="swiper-banner">
             <div class="swiper BannerSwiper">
@@ -226,27 +212,27 @@
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bannerSwiper-slide">
                         <a href="#">
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bannerSwiper-slide">
                         <a href="#">
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bannerSwiper-slide">
                         <a href="#">
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bannerSwiper-slide">
                         <a href="#">
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bannerSwiper-slide">
                         <a href="#">
                             <img src="./images/bannerlar/main_page_banner.jpg.png" alt="Reklama Banner">
                         </a>
@@ -333,37 +319,39 @@
     <footer class="page__size">
         <div class="footer-wrapper">
             <ul class="footer-list-box">
-                <li class="footer-list-item">
+                <li class="footer-list-item footer-title-item ">
                     <p class="footer-item-link footer-title-link">
                         Biz haqimizda
                     </p>
                 </li>
                 <li class="footer-list-item">
-                    <a class="footer-item-link" href="#">
+                    <a class="footer-item-link" href="https://uzum.uz/uz/about/delivery-points" target="_blank">
                         Topshirish punktlari
                     </a>
                 </li>
                 <li class="footer-list-item">
-                    <a class="footer-item-link" href="#">
+                    <a class="footer-item-link" href="https://uzum.uz/uz/about/careers" target="_blank">
                         Vakansiyalar
                     </a>
                 </li>
             </ul>
             <ul class="footer-list-box">
-                <li class="footer-list-item">
+                <li class="footer-list-item footer-title-item">
                     <p class="footer-item-link footer-title-link">
                         Foydalanuvchilarga
                     </p>
                 </li>
                 <li class="footer-list-item">
-                    <a class="footer-item-link" href="#">Biz bilan bo'lanish</a>
+                    <a class="footer-item-link" id="contact-btn" href="#">Biz bilan bo'lanish</a>
                 </li>
                 <li class="footer-list-item">
-                    <a class="footer-item-link" href="#">Savol-Javob</a>
+                    <a class="footer-item-link" href="https://uzum.uz/uz/faq" target="_blank">
+                        Savol-Javob
+                    </a>
                 </li>
             </ul>
             <ul class="footer-list-box">
-                <li class="footer-list-item">
+                <li class="footer-list-item footer-title-item">
                     <p class="footer-item-link footer-title-link">
                         Tadbirkorlarga
                     </p>
@@ -384,9 +372,9 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer-list-box network-box">
-                <div class="footer-network-item mobile-store-box">
-                    <p class="footer-item-link footer-title-link yuklab-olish">
+            <ul class="footer-list-box uzum-network">
+                <li class="mobile-store-box">
+                    <p class="footer-title-link footer-title-item">
                         Ilovani yuklab olish
                     </p>
                     <div class="stores">
@@ -474,9 +462,9 @@
                             Google Play
                         </a>
                     </div>
-                </div>
-                <div class="footer-network-item mobile-store-box footer-social-network">
-                    <p class="footer-item-link footer-title-link ">
+                </li>
+                <li class="mobile-store-box">
+                    <p class="footer-title-link footer-title-item">
                         Uzum ijtimoiy tarmoqlari
                     </p>
                     <div class="stores">
@@ -557,8 +545,8 @@
                             </svg>
                         </a>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-item">

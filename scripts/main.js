@@ -23,7 +23,7 @@ let product__data = [
         installmentPayment: "600 so'm/oyiga",
         old__price: "10 000 so'm",
         new__price: "5 000 so'm",
-        category: ["Popular"],
+        category: ["Popular", "Uyda savdo"],
         quantity: 1,
         like: false,
     },
@@ -368,10 +368,10 @@ let product__data = [
 
 let swiper = new Swiper('.BannerSwiper', {
     loop: true,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1500,
+    //     disableOnInteraction: false,
+    // },
     slidesPerView: 1,
     spaceBetween: 6,
     navigation: {
@@ -387,7 +387,7 @@ let swiper = new Swiper('.BannerSwiper', {
 let n = 10
 
 function toggleLike() {
-     product__data.forEach((item) => {
+    product__data.forEach((item) => {
         const heartButtons = document.querySelectorAll('.heart__btn');
         heartButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -457,6 +457,7 @@ function renderProducts(productList, container) {
                                            d="M7.5 14.3401C7.77614 14.3401 8 14.564 8 14.8401V17.3401H10.5C10.7761 17.3401 11 17.564 11 17.8401C11 18.1162 10.7761 18.3401 10.5 18.3401H8V20.8401C8 21.1162 7.77614 21.3401 7.5 21.3401C7.22386 21.3401 7 21.1162 7 20.8401V18.3401H4.5C4.22386 18.3401 4 18.1162 4 17.8401C4 17.564 4.22386 17.3401 4.5 17.3401H7V14.8401C7 14.564 7.22386 14.3401 7.5 14.3401Z"
                                            fill="#15151A" />
                                    </svg>
+                                   <i class='bx bx-check hidden'></i>
                                </button>
                            </div>
                        </div>
@@ -517,9 +518,9 @@ topBox.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+const main = document.getElementById('main');
 const LikeProductBtn = document.getElementById('likeProducts-btn')
 const swiperBannerBox = document.getElementById('swiper-banner');
-const main = document.getElementById('main');
 let LikeProductsBox = document.createElement('div')
 LikeProductsBox.classList.add('products-container');
 
@@ -558,7 +559,7 @@ function showEmptyLikeProductsUI() {
             <img src="./Images/uzumContainer/Like.png" alt="Like list bo'sh">
             <h2 class="product-title">Sizga yoqqanini qo'shing</h2>
             <p class="product-text">Mahsulotdagi ♡ belgisini bosing. Akkauntga kiring va barcha saralanganlar saqlanib qoladi</p>
-            <button class="product-btn" id="account__open">Akkauntga kirish</button>
+            <button class="product-btn" id="account__open" onclick="accountOpen()" >Akkauntga kirish</button>
         </div>
     `;
 }
@@ -848,6 +849,164 @@ document.addEventListener('DOMContentLoaded', updateCartUI);
 let accountBtn = document.getElementById('account-btn')
 
 accountBtn.addEventListener('click', () => {
+    accountOpen()
+})
+
+function accountOpen() {
     window.open('./account.html')
     window.close()
+}
+
+const searchInput = document.getElementById("search");
+const resultsContainer = document.getElementById("search-product-results");
+const searchIcon = document.getElementById('search-icon');
+
+searchIcon.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase();
+    const filteredProducts = product__data.filter(product =>
+        product.product__content.toLowerCase().includes(searchText)
+    );
+
+    displayResults(filteredProducts);
+});
+
+searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase();
+    const filteredProducts = product__data.filter(product =>
+        product.product__content.toLowerCase().includes(searchText)
+    );
+
+    displayResults(filteredProducts);
+});
+
+function displayResults(filteredProducts) {
+    document.querySelector('.search-product-container').style.display = "block"
+    resultsContainer.innerHTML = "";
+    if (filteredProducts.length === 0) {
+    } else if (filteredProducts.length !== 0) {
+        swiperBannerBox.innerHTML = ''
+        filteredProducts.forEach(product => {
+            const productElement = document.createElement("div");
+            productElement.innerHTML = `
+            <div class="product__item">
+                <div class="product__image">
+                    <div class="image__cover"></div>
+                    <div class="image__box">
+                        <img src="${product.imge}" alt="${product.image__alt}">
+                    </div>
+                    <div class="heart__box">
+                        <button class="heart__btn" onclick="likeProduct(${product.id})" data-product-id="${product.id}">
+                            <i class='bx bx-heart heart'></i>
+                            <i class='bx bxs-heart heart heart__hidden'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__content__box">
+                <div class="product__about__box">
+                    <p class="conten__text">${product.product__content}</p>
+                </div>
+                <div class="degree__box">
+                    <div class="degree__value__box">
+                        <i class='bx bxs-star'></i>
+                        <span class="degree__value">${product.degree}</span>
+                    </div>
+                    <div class="comment__box">
+                        <span class="comment__number">
+                            (${product.comment} sharhlar)
+                        </span>
+                    </div>
+                </div>
+                <div class="installment__payment__box">
+                    <span class="installment__payment">${product.installmentPayment}</span>
+                </div>
+                 <div class="price__box">
+                           <div class="product__price">
+                               <span class="old__price">
+                                   <del>${product.old__price}</del>
+                               </span>
+                               <span class="new__price">${product.new__price}</span>
+                           </div>
+                           <div class="shop__box">
+                               <button class="shop__btn" onclick="shopProduct(${product.id})">
+                                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                           d="M8 10.3401V8.34009H6V12.8401C6 13.1162 5.77614 13.3401 5.5 13.3401C5.22386 13.3401 5 13.1162 5 12.8401V7.34009H8C8 4.93637 9.95227 3.34009 12 3.34009C14.0575 3.34009 16 5.04565 16 7.34009H19V19.8401C19 20.6685 18.3284 21.3401 17.5 21.3401H12.5C12.2239 21.3401 12 21.1162 12 20.8401C12 20.564 12.2239 20.3401 12.5 20.3401H17.5C17.7761 20.3401 18 20.1162 18 19.8401V8.34009H16V10.3401H15V8.34009H9V10.3401H8ZM12 4.34009C10.4477 4.34009 9 5.54381 9 7.34009H15C15 5.63453 13.5425 4.34009 12 4.34009Z"
+                                           fill="#15151A" />
+                                       <path
+                                           d="M7.5 14.3401C7.77614 14.3401 8 14.564 8 14.8401V17.3401H10.5C10.7761 17.3401 11 17.564 11 17.8401C11 18.1162 10.7761 18.3401 10.5 18.3401H8V20.8401C8 21.1162 7.77614 21.3401 7.5 21.3401C7.22386 21.3401 7 21.1162 7 20.8401V18.3401H4.5C4.22386 18.3401 4 18.1162 4 17.8401C4 17.564 4.22386 17.3401 4.5 17.3401H7V14.8401C7 14.564 7.22386 14.3401 7.5 14.3401Z"
+                                           fill="#15151A" />
+                                   </svg>
+                                   <i class='bx bx-check hidden'></i>
+                               </button>
+                           </div>
+                       </div>
+                    </div>
+            </div>            `;
+            resultsContainer.appendChild(productElement);
+        });
+    }
+}
+
+let uzumContactBtn = document.getElementById('contact-btn')
+let uzumContactBox = document.createElement('div')
+uzumContactBox.classList.add('contact-wrap')
+uzumContactBtn.addEventListener('click', () => {
+    uzumContactBox.innerHTML = `
+        <div class="contact-hidden" id="contact-hidden"></div>
+        <div class="contact-content-box">
+            <div class="contact-title-box">
+                <h4 class="contact-title">
+                    Biz bilan bogʻlanish
+                </h4>
+                <button class="contact-back-btn" id="contact-back-btn">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="contact-content">
+                 <p class="contact-text">
+                    Mutaxassislarimizga sizga qulay ijtimoiy tarmoq chati yoki telefon orqali savol bering:
+                 </p>
+                <div class="contact-link-box">
+                    <a class="contact-link" href="https://t.me/Uzum_Support_Bot" target="_blank">
+                        <div class="netork-wrap telegram-box">
+                            <i class='bx bxl-telegram'></i>
+                        </div>
+                        <p class="contact-link-text">
+                            Telegram
+                        </p>
+                    </a>
+                    <a class="contact-link" href="#" >
+                        <div class="netork-wrap phone-box">
+                            <i class='bx bxs-phone'></i>
+                        </div>
+                        <p class="contact-link-text">
+                            +998 (78) 150-11-15
+                        </p>
+                    </a>
+                </div>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        Qoʻllab-quvvatlash xizmatining email manzili:
+                        <br>
+                        <a class="email-link'" href="mailto:support@uzum.com" target="_blank">
+                            support@uzum.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    `
+    document.body.prepend(uzumContactBox);
+
+    let contactHiddenBtn = document.getElementById('contact-hidden');
+    contactHiddenBtn.addEventListener("click", () => {
+        uzumContactBox.innerHTML = '';
+    });
+
+    let contactCloseBtn = document.getElementById('contact-back-btn');
+    contactCloseBtn.addEventListener("click", () => {
+        uzumContactBox.innerHTML = '';
+    });
+
 })

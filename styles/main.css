@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --text-inter: "Inter", sans-serif;
+    --text-roboto: 'Roboto', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    font-family: var(--text-roboto);
 }
 
 ul,
@@ -22,10 +28,6 @@ a {
     overflow: hidden;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 .page__size {
     max-width: 1240px;
     width: 100%;
@@ -38,8 +40,6 @@ header {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 header .header-top {
@@ -47,59 +47,6 @@ header .header-top {
     width: 100%;
     height: 32px;
     background-color: #f4f5f5;
-}
-
-.uzum {
-    display: none;
-    width: 100%;
-    padding-right: 20px;
-}
-
-.uzumlogo-box {
-    border-radius: 8px;
-}
-
-.uzum-mobile-text-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile__title {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: .011rem;
-    line-height: 18px;
-    color: #1f2026;
-}
-
-.mobile__text {
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.006rem;
-    line-height: 16px;
-    color: #4d4f59;
-}
-
-.uzumlogo-box {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
-}
-
-.mobile__link {
-    margin-left: auto;
-    display: inline-block;
-    width: 114px;
-    height: 32px;
-    background-color: #7000ff;
-    border-radius: 5px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header .navbarBox {
@@ -118,9 +65,11 @@ header .navbarBox {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav__wrapper .uzumLogo a {
+    display: inline-block;
     width: 215px;
     height: 32px;
 }
@@ -156,10 +105,10 @@ header .navbarBox {
 }
 
 .input__products__box {
-    width: 496.47px;
+    max-width: 496px;
+    width: 100%;
     height: 40px;
     border: 1px solid #76797F4D;
-    border-radius: 4px;
     border-radius: 2px;
     display: flex;
     justify-content: space-between;
@@ -168,7 +117,7 @@ header .navbarBox {
 
 .input__products__box label {
     width: 85%;
-    padding: 11.5px 39px 11.5px 17px;
+    padding: 12px;
     cursor: text;
 }
 
@@ -177,7 +126,7 @@ header .navbarBox {
     height: 17px;
     padding: 0px 15px;
     border: none;
-    font-family: "Inter", sans-serif;
+    font-family: var(--text-inter);
     font-size: 14px;
     font-weight: 400;
     line-height: 16.94px;
@@ -186,10 +135,8 @@ header .navbarBox {
 }
 
 .input__products__box .search-icon {
-    display: inline-block;
     width: 15%;
     height: 40px;
-    padding: 8px 25.24px;
     border-radius: 0px 4px 4px 0px;
     background: #76797F0D;
     cursor: pointer;
@@ -204,12 +151,12 @@ header .navbarBox {
 }
 
 .account__box {
-    width: 345.53px;
+    max-width: 325px;
     height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     cursor: pointer;
 }
 
@@ -220,13 +167,6 @@ header .navbarBox {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 14px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #000;
     cursor: pointer;
     padding: 8px 8px;
     transition: all .4s;
@@ -242,15 +182,21 @@ header .navbarBox {
     color: #000;
 }
 
+.account__button__label {
+    font-family: var(--text-inter);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000;
+}
+
 .nav__list__box {
     width: 100%;
     height: 38px;
     display: flex;
-    justify-content: space-between;
 }
 
 .nav__list__box .nav__list {
-    width: 95%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -259,13 +205,11 @@ header .navbarBox {
 }
 
 .nav__link {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--text-roboto);
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #000000B2;
     position: relative;
     opacity: .8;
@@ -291,19 +235,18 @@ header .navbarBox {
 }
 
 .more {
-    width: 5%;
+    width: 48px !important;
     height: 30px;
     cursor: pointer;
+    display: flex;
 }
 
 .more .more__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--text-roboto);
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #000;
     opacity: .8;
     position: relative;
@@ -326,17 +269,17 @@ main {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .swiper__container {
     width: 100%;
-    height: auto;
     position: relative;
 }
 
 .BannerSwiper {
     width: 100%;
-    height: 413px;
+    height: clamp(230px, 10vw + 200px, 418px);
     border-radius: 20px;
 }
 
@@ -348,8 +291,12 @@ main {
 }
 
 .bannerSwiper-slide a img {
+    object-fit: cover;
+    object-position: center;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 .swiper-button-next,
@@ -398,7 +345,7 @@ main {
 .title__link {
     display: inline-block;
     color: #1f2026;
-    font-family: "Inter", sans-serif;
+    font-family: var(--text-inter);
     font-size: 28px;
     font-weight: 700;
     line-height: 36px;
@@ -481,7 +428,6 @@ main {
     position: absolute;
     top: 12px;
     right: 9px;
-    z-index: 10;
 }
 
 .heart__btn {
@@ -519,12 +465,10 @@ main {
 }
 
 .product__about__box .conten__text {
-    font-family: 'Inter' sans-serif;
+    font-family: var(--text-inter);
     font-size: 12.8px;
     font-weight: 400;
     line-height: 15.36px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 
 .degree__box {
@@ -542,12 +486,10 @@ main {
 
 .degree__value__box .degree__value,
 .comment__box .comment__number {
-    font-family: 'Inter' sans-serif;
+    font-family: var(--text-inter);
     font-size: 11.2px;
     font-weight: 300;
     line-height: 11.2px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #8A8D93;
 }
 
@@ -563,12 +505,10 @@ main {
 }
 
 .installment__payment__box .installment__payment {
-    font-family: 'Roboto' sans-serif;
+    font-family: var(--text-roboto);
     font-size: 11px;
     font-weight: 400;
     line-height: 17px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1F1F26;
 }
 
@@ -591,23 +531,19 @@ main {
 }
 
 .product__price .old__price {
-    font-family: 'Inter' sans-serif;
+    font-family: var(--text-inter);
     font-size: 11.2px;
     font-weight: 400;
     line-height: 13.44px;
     text-decoration-line: line-through;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #757575;
 }
 
 .product__price .new__price {
-    font-family: 'Inter' sans-serif;
+    font-family: var(--text-inter);
     font-size: 14px;
     font-weight: 500;
     line-height: 16.8px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 
 .shop__box {
@@ -630,6 +566,11 @@ main {
     background-color: #dee0e5;
 }
 
+.bx-check {
+    font-size: 28px;
+    color: green;
+}
+
 .more__product__box {
     width: 100%;
     height: auto;
@@ -640,7 +581,8 @@ main {
 }
 
 .more__product__btn {
-    width: 740px;
+    max-width: 740px;
+    width: 100%;
     height: 56px;
     border: none;
     border-radius: 8px;
@@ -653,13 +595,11 @@ main {
 }
 
 .more__product__btn .more__product__text {
-    font-family: 'Inter' sans-serif;
+    font-family: var(--text-inter);
     font-size: 16px;
     font-weight: 600;
     line-height: 19.36px;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #141415;
     cursor: pointer;
 }
@@ -675,7 +615,6 @@ main {
 
 .banner-image {
     width: 100%;
-    height: 415px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -685,6 +624,8 @@ main {
     height: 100%;
     border-radius: 8px;
     transition: all .2s ease;
+    object-fit: cover;
+    object-position: center;
 }
 
 .banner-wrapper:hover .banner-image img {
@@ -692,28 +633,26 @@ main {
 }
 
 .footer-wrapper {
+    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    flex-wrap: nowrap;
     border-bottom: 1px solid #76797F33;
     padding-bottom: 40px;
 }
 
 .footer-list-box {
-    width: 310px;
-    height: 207px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
 .footer-item-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--text-roboto);
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #4D4E59;
 }
 
@@ -722,6 +661,7 @@ main {
 }
 
 .footer-title-link {
+    font-family: var(--text-roboto);
     font-size: 14px;
     font-weight: 500;
     line-height: 18px;
@@ -729,23 +669,19 @@ main {
 }
 
 .mobile-store-box {
-    height: 24px;
     display: flex;
-    align-items: self-start;
-    gap: 23px;
     flex-direction: column;
-    margin-top: 20px;
+    align-items: self-start;
+    gap: 15px;
     margin-bottom: 10px;
 }
 
 .footer-network-link {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text-inter);
     font-size: 12.8px;
     font-weight: 500;
     line-height: 15.36px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1F1F26;
     display: flex;
     align-items: center;
@@ -758,12 +694,7 @@ main {
     margin-right: 5px;
 }
 
-.footer-social-network {
-    margin-top: 50px;
-}
-
 .footer-network-messengers {
-    margin-top: 15px;
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -785,24 +716,20 @@ main {
 }
 
 .footer-botom-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--text-roboto);
     font-size: 14px;
     font-weight: 500;
     line-height: 18px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1F1F26;
 }
 
 .footer-botom-text {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--text-roboto);
     font-size: 11px;
     font-weight: 400;
     line-height: 14px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #4D4E59;
 }
 
@@ -830,7 +757,7 @@ main {
 
 .topBox i {
     color: #fff;
-    font-style: 54px;
+    font-size: 32px;
 }
 
 .products-container {
@@ -852,7 +779,7 @@ main {
 }
 
 .products-container .product-title {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text-inter);
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.2em;
@@ -860,7 +787,7 @@ main {
 }
 
 .products-container .product-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text-inter);
     font-size: .8rem;
     font-weight: 400;
     line-height: 1.4em;
@@ -872,7 +799,7 @@ main {
     border-radius: 4px;
     color: #1f2026;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text-inter);
     font-size: .875rem;
     font-weight: 500;
     height: 38px;
@@ -984,7 +911,7 @@ main {
 }
 
 .cart-item-text {
-    font-family: "Inter", sans-serif;
+    font-family: var(--text-inter);
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
@@ -1186,7 +1113,7 @@ main {
     background-color: #7000ff;
     color: #fff;
     border-radius: 12px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text-inter);
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -1206,4 +1133,128 @@ main {
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.search-product-container {
+    padding: 20px 0;
+    display: none;
+}
+
+.search-product-results {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.contact-wrap {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hidden {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+.contact-content-box {
+    padding: 32px;
+    margin: 32px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 100;
+    max-width: 432px;
+    width: 100%;
+}
+
+.contact-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0 0 8px;
+    margin-bottom: 25px;
+}
+
+.contact-title {
+    font-family: var(--text-inter);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2026;
+}
+
+.contact-back-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+}
+
+.contact-back-btn i {
+    font-size: 20px;
+}
+
+.contact-text {
+    font-family: var(--text-inter);
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    padding-left: 8px;
+}
+
+.contact-link-box {
+    margin-top: 16px;
+}
+
+.contact-link {
+    align-items: center;
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 6px;
+    padding: 8px;
+    text-decoration: none;
+    width: 100%;
+    gap: 12px;
+}
+
+.netork-wrap {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 28px;
+}
+
+.telegram-box {
+    background-color: #28A8E9;
+}
+
+.phone-box {
+    background-color: rgb(22, 198, 77);
+}
+
+.contact-link-text {
+    font-family: var(--text-inter);
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1rem;
+    color: #1f2026;
 }

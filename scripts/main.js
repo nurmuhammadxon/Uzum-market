@@ -368,10 +368,10 @@ let product__data = [
 
 let swiper = new Swiper('.BannerSwiper', {
     loop: true,
-    // autoplay: {
-    //     delay: 1500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
     slidesPerView: 1,
     spaceBetween: 6,
     navigation: {
@@ -655,6 +655,25 @@ LikeProductBtn.addEventListener('click', () => {
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function shopProduct(productId) {
+    const button = document.querySelector(`button.shop__btn[onclick="shopProduct(${productId})"]`);
+
+    if (button) {
+        const svg = button.querySelector('svg');
+        const checkIcon = button.querySelector('.bx-check');
+
+        if (svg && checkIcon) {
+            svg.classList.add('hidden');
+            checkIcon.classList.remove('hidden');
+
+            setTimeout(() => {
+                svg.classList.remove('hidden');
+                checkIcon.classList.add('hidden');
+            }, 1000);
+        }
+    }
+
+    console.log(`Product with ID ${productId} added to the cart!`);
+
     const product = product__data.find(item => item.id === productId);
 
     if (product) {
@@ -1010,3 +1029,65 @@ uzumContactBtn.addEventListener('click', () => {
     });
 
 })
+
+let navListData = [
+    "Elektronika",
+    "Maishiy texnika",
+    "Kiyim",
+    "Poyabzallar",
+    "Aksessuarlar",
+    "Goʻzallik va parvarish",
+    "Salomatlik",
+    "Uy-roʻzgʻor buyumlari",
+    "Qurilish va taʼmirlash",
+    "Avtotovarlar",
+    "Bolalar tovarlari",
+    "Xobbi va ijod",
+    "Sport va hordiq",
+    "Oziq-ovqat mahsulotlari",
+    "Maishiy kimyoviy moddalar",
+    "Kanselyariya tovarlari",
+    "Hayvonlar uchun tovarlar",
+    "Dacha, bogʻ va tomorqa",
+    "Reabilitatsiya uchun subsidiyalangan mahsulotlar",
+];
+
+
+
+let navList = document.getElementById('nav__list');
+
+navListData.forEach((navItem) => {
+    navList.innerHTML += `
+        <li class="nav__item">
+            <a href="#" class="nav__link">${navItem}</a>
+        </li>
+    `;
+});
+
+let catalogBtn = document.getElementById('btn__catalog')
+let moreNavBtn = document.getElementById('more-btn')
+let catalogNavListWrap = document.getElementById('catalog-nav-list')
+
+let catalogTransition = createElement('div')
+let wrapperTransition = createElement('div')
+let modalCatalog = createElement('div')
+let navWrapper = createElement('nav')
+
+catalogBtn.addEventListener('click', () => {
+    navWrapper.innerHTML = `
+        <div>
+            <ul>
+                ${navListData.map((item) => {
+        return `
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">${item}</a>
+                    </li>
+                    `;
+    }).join('')}
+            </ul>
+        </div>
+        <div>
+            <h2></h2>
+        </div>
+    `;
+});

@@ -24,10 +24,6 @@
         gap: 10px;
     }
 
-    .btn__catalog {
-        display: none;
-    }
-
     .input__products__box input[type="search"] {
         padding: 0;
     }
@@ -201,6 +197,19 @@
         justify-content: center;
     }
 
+    .catalogBox {
+        width: 80px;
+        height: 32px;
+    }
+
+    .catalogBox p {
+        font-size: 10px;
+    }
+
+    .catalogBox .bx-x {
+        font-size: 14px;
+    }
+
     .nav__wrapper .uzumLogo a {
         width: 180px !important;
     }
@@ -272,6 +281,22 @@
     .swiper-pagination-bullet {
         width: 4px;
         height: 4px;
+    }
+
+    .catalog-nav-list {
+        top: 60px;
+    }
+
+    .catalog-box {
+        max-width: 180px;
+    }
+
+    .catalog__item {
+        height: 30px;
+    }
+
+    .catalog__link {
+        font-size: 14px;
     }
 }
 
@@ -401,6 +426,25 @@
 
     .input__products__box .search-icon i {
         font-size: 14px;
+    }
+
+    .catalogBox {
+        width: 60px;
+        height: 26px;
+    }
+
+    .catalogBox .catolog-icon,
+    .catalogBox .catolog-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .catalogBox p {
+        font-size: 8px;
+    }
+
+    .catalogBox .bx-x {
+        font-size: 10px;
     }
 
     .account__box {

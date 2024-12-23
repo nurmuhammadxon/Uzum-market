@@ -1031,63 +1031,1075 @@ uzumContactBtn.addEventListener('click', () => {
 })
 
 let navListData = [
-    "Elektronika",
-    "Maishiy texnika",
-    "Kiyim",
-    "Poyabzallar",
-    "Aksessuarlar",
-    "Goʻzallik va parvarish",
-    "Salomatlik",
-    "Uy-roʻzgʻor buyumlari",
-    "Qurilish va taʼmirlash",
-    "Avtotovarlar",
-    "Bolalar tovarlari",
-    "Xobbi va ijod",
-    "Sport va hordiq",
-    "Oziq-ovqat mahsulotlari",
-    "Maishiy kimyoviy moddalar",
-    "Kanselyariya tovarlari",
-    "Hayvonlar uchun tovarlar",
-    "Dacha, bogʻ va tomorqa",
-    "Reabilitatsiya uchun subsidiyalangan mahsulotlar",
+    {
+        catalog: "Elektronika",
+        id: 1,
+        sections: [
+            {
+                sectionName: "Smartfonlar va telefonlar",
+                sectionList: [
+                    "Smartfonlar uchun aksessuarlar",
+                    "Smartfonlar",
+                    "Knopkali telefonlar",
+                    "Ehtiyot qismlar va ta'mirlash",
+                    "Statsionar telefonlar"
+                ]
+            },
+            {
+                sectionName: " Noutbuklar, planshetlar va elektron kitoblar",
+                sectionList: [
+                    "Noutbuklar",
+                    "Planshetlar va elektron kitoblar",
+                    "Noutbuk uchun aksessuarlar"
+                ]
+            },
+            {
+                sectionName: "Quloqchinlar va audio texnikalar",
+                sectionList: [
+                    "Quloqchinlar",
+                    "Audiotexnika",
+                    "Proigrivatel uchun aksessuarlar",
+                    "Periferiya va aksessuarlar"
+                ]
+            },
+            {
+                sectionName: "Soatlar va elektron budilniklar",
+                sectionList: [
+                    "Elektron budilniklar",
+                    "Proyeksiya soatlari",
+                    "Aromabudilniklar va katrijlar",
+                    "Radio budilniklar"
+                ]
+            },
+            {
+                sectionName: "Kvadrokopterlar va aksessuarlar",
+                sectionList: [
+                    " Kvadrokopterlar uchun aksessuarlar ",
+                    "Kvadrokopterlar",
+                ]
+            },
+            {
+                sectionName: "Optik anjomlar",
+                sectionList: [
+                    "Mikroskoplar",
+                    "Okulyarlar",
+                    "Teleskoplar",
+                    "Teatr binoklari"
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Maishiy texnika",
+        id: 2,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Kiyim",
+        id: 3,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Poyabzallar",
+        id: 4,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Aksessuarlar",
+        id: 5,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Goʻzallik va parvarish",
+        id: 6,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Salomatlik",
+        id: 7,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Uy-roʻzgʻor buyumlari",
+        id: 8,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Qurilish va taʼmirlash",
+        id: 9,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Bolalar tovarlari",
+        id: 10,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Xobbi va ijod",
+        id: 11,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Sport va hordiq",
+        id: 12,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Oziq-ovqat mahsulotlari",
+        id: 13,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Maishiy kimyoviy moddalar",
+        id: 14,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Kanselyariya tovarlari",
+        id: 15,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Hayvonlar uchun tovarlar",
+        id: 16,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Dacha, bogʻ va tomorqa",
+        id: 17,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    },
+    {
+        catalog: "Reabilitatsiya uchun subsidiyalangan mahsulotlar",
+        id: 18,
+        sections: [
+            {
+                sectionName: "Goʻzallik uchun texnika",
+                sectionList: [
+                    "Soch turmaklash",
+                    "Soch kesish",
+                    "Elektr ustaralar"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Iqlim texnikasi",
+                sectionList: [
+                    "Ventilyatorlar",
+                    "Havoni tozalash va namlashtirish",
+                    "Konditsionerlar va split tizimlar",
+                    "Isitgichlar",
+                    "Havo sovutgichlari",
+                    "Suv isitgichlari va isitish qozonlari"
+                ]
+            },
+            {
+                sectionName: "Oshxona texnikalari",
+                sectionList: [
+                    "Maydalash va aralashtirish",
+                    "Qovurish va pishirish uskunalari",
+                    "Elektr choynak va termopotlar",
+                    "Boshqa oshxona texnikalari",
+                ]
+            },
+            {
+                sectionName: "Katta maishiy texnika",
+                sectionList: [
+                    "Suv uchun kulerlar va aksessuarlar",
+                    "Katta maishiy texnika uchun aksessuarlar",
+                    "Sovutgichlar va mulatgichlar",
+                    "Kirsh yuvish mashinalari",
+                ]
+            },
+        ]
+    }
 ];
-
-
-
 let navList = document.getElementById('nav__list');
 
 navListData.forEach((navItem) => {
     navList.innerHTML += `
         <li class="nav__item">
-            <a href="#" class="nav__link">${navItem}</a>
+            <a href="#" class="nav__link">${navItem.catalog}</a>
         </li>
     `;
 });
 
-let catalogBtn = document.getElementById('btn__catalog')
-let moreNavBtn = document.getElementById('more-btn')
-let catalogNavListWrap = document.getElementById('catalog-nav-list')
+let catalogBtn = document.getElementById('btn__catalog');
+let moreNavBtn = document.getElementById('more-btn');
+let catalogX = document.getElementById('catalob-x');
+let catalogIcon = document.getElementById('catolog-icon');
+let catalogNavListWrap = document.getElementById('catalog-nav-list');
 
-let catalogTransition = createElement('div')
-let wrapperTransition = createElement('div')
-let modalCatalog = createElement('div')
-let navWrapper = createElement('nav')
+let wrapperTransition = document.createElement('div');
+let modalCatalog = document.createElement('div');
+let navWrapper = document.createElement('nav');
+
+wrapperTransition.classList.add('wrapper-transition');
+modalCatalog.classList.add('modal-catalog');
+navWrapper.classList.add('nav-wrap-catalog');
+
+function catalogAdd() {
+    if (catalogNavListWrap.style.display === "block") {
+        catalogNavListWrap.style.display = "none";
+        catalogX.style.display = "none";
+        catalogIcon.style.display = "block";
+    } else {
+        catalogNavListWrap.style.display = "block";
+        catalogX.style.display = "block";
+        catalogIcon.style.display = "none";
+
+        // Kontentni yaratamiz
+        navWrapper.innerHTML = `
+            <div class="catalog-box">
+                <ul class="calatog-list">
+                    ${navListData.map((item) => {
+            return `
+                            <li class="catalog__item" data-id="${item.id}">
+                                <a href="#" class="catalog__link">
+                                ${item.catalog} 
+                                </a>
+                            </li>
+                        `;
+        }).join('')}
+                </ul>
+            </div>
+            <div class="catalog-section">
+                <h2 class="catalog__title"></h2>
+                <div class="sections-wrapper"></div>
+            </div>
+        `;
+
+        const catalogItem = navWrapper.querySelectorAll('.catalog__item');
+        const catalogTitle = navWrapper.querySelector('.catalog__title');
+        const sectionsWrapper = navWrapper.querySelector('.sections-wrapper');
+
+        catalogItem.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                const catalogId = parseInt(link.getAttribute('data-id'));
+                const catalogData = navListData.find(item => item.id === catalogId);
+
+                catalogTitle.textContent = catalogData.catalog;
+
+                sectionsWrapper.innerHTML = catalogData.sections.map(section => {
+                    return `
+                        <div class="section">
+                            <h3 class="catalog__title__section">${section.sectionName}</h3>
+                            <ul class="catalog-section-list">
+                                ${section.sectionList.map(item => `
+                                    <li class="catalog-section-item">
+                                        <a class="catalog-section-link" href="#">${item}</a>
+                                    </li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }).join('');
+            });
+        });
+
+        modalCatalog.appendChild(navWrapper);
+        wrapperTransition.appendChild(modalCatalog);
+        catalogNavListWrap.appendChild(wrapperTransition);
+    }
+}
 
 catalogBtn.addEventListener('click', () => {
-    navWrapper.innerHTML = `
-        <div>
-            <ul>
-                ${navListData.map((item) => {
-        return `
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">${item}</a>
-                    </li>
-                    `;
-    }).join('')}
-            </ul>
-        </div>
-        <div>
-            <h2></h2>
-        </div>
-    `;
+    catalogAdd()
+});
+
+moreNavBtn.addEventListener('click', () => {
+    catalogAdd()
 });

@@ -1098,7 +1098,8 @@ let navListData = [
                 sectionList: [
                     "Soch turmaklash",
                     "Soch kesish",
-                    "Elektr ustaralar"
+                    "Elektr ustaralar",
+                    "Eplyatorlar va aksessuarlar",
                 ]
             },
             {
@@ -1148,51 +1149,48 @@ let navListData = [
         id: 3,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Ayollar kiyimi",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Ichki kiyim",
+                    "Liboslar va sarafanlar",
+                    "Futbolkalar va polo",
+                    "Paypoqlar, kolgotkilar va chulkilar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Erkaklar kiyimi",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Futbolkalar va polo",
+                    "Paypoqlar va getrlar",
+                    "Shimlar",
+                    "Xudi va svitshotlar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Qizlar uchun kiyimlar",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Koʻylaklar va sarafanlar",
+                    "Futbolkalar va polo",
+                    "Paypoq va kolgotkilar",
+                    "Top va maykalar",
                 ]
             },
             {
-                sectionName: "Oshxona texnikalari",
+                sectionName: "Oʻgʻil bolalar uchun kiyimlar",
                 sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
+                    "Futbolkalar va maykalar",
+                    "Kostyumlar va pidjaklar",
+                    "Kiyim to'plamlari",
+                    "Sport kiyimlari",
                 ]
             },
             {
-                sectionName: "Katta maishiy texnika",
+                sectionName: "Yangi tugʻilgan chaqaloqlar uchun kiyimlar",
                 sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Bodi va kombinezonlar",
+                    "Kostyumlar va toʻplamlar",
+                    "Shimlar va ishtonlar",
+                    "Paypoqlar, pinetkalar",
                 ]
             },
         ]
@@ -1202,51 +1200,48 @@ let navListData = [
         id: 4,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Ayollar poyabzali",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Krossovkalar va kedalar",
+                    "Mokasinlar va topsayderlar",
+                    "Rezin poyabzallar",
+                    "Baletkalar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Erkaklar poyabzali",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Krossovkalar va kedalar",
+                    "Tufli",
+                    "Mokasinlar va topsayderlar",
+                    "Rezin poyabzal",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Qizlar uchun poyabzal",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Krossovkalar va kedalar",
+                    "Tuflilar va cheshkalar",
+                    "Sandalilar va sabo",
+                    "Mokasinlar va sliponlar",
                 ]
             },
             {
-                sectionName: "Oshxona texnikalari",
+                sectionName: "Oʻgʻil bolalar uchun poyabzal",
                 sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
+                    "Krossovkalar va kedalar",
+                    "Tuflilar va cheshkalar",
+                    "Sandalilar va sabo",
+                    "Botinkalar va qoʻnjsiz botinkalar",
                 ]
             },
             {
-                sectionName: "Katta maishiy texnika",
+                sectionName: "Poyabzal aksessuarlari",
                 sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Oyoq kiyim uchun pataklar va qoʻyilmalar",
+                    "Bogʻichlar",
+                    "Poyabzal qoshiqlari",
+                    "Jibitslar",
                 ]
             },
         ]
@@ -1256,51 +1251,66 @@ let navListData = [
         id: 5,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Ayollar aksessuarlari",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Bijuteriyalar",
+                    "Sumkalar va ryukzaklar",
+                    "Soch uchun aksessuarlar",
+                    "Koʻzoynak",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Erkaklar aksessuarlari",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Koʻzoynak",
+                    "Soatlar va qayishlar",
+                    "Sumkalar va ryukzaklar",
+                    "Bijuteriyalar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Qizlar uchun aksessuarlar",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Soch uchun aksessuarlar",
+                    "Bijuteriyalar",
+                    "Sumkalar va ryukzaklar",
+                    "Bosh kiyimlar",
                 ]
             },
             {
-                sectionName: "Oshxona texnikalari",
+                sectionName: "Oʻgʻil bolalar uchun aksessuarlar",
                 sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
+                    "Sumkalar va ryukzaklar",
+                    "Bijuteriyalar",
+                    "Bosh kiyimlar",
+                    "Koʻzoynaklar",
                 ]
             },
             {
-                sectionName: "Katta maishiy texnika",
+                sectionName: "Sayohat uchun aksessuarlar",
                 sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Yoʻl sumkalari",
+                    "Uyqu uchun tovarlar",
+                    "Sayohat uchun organayzerlar",
+                    "Chamadonlar",
+                ]
+            },
+            {
+                sectionName: "Diniy aksessuarlar",
+                sectionList: [
+                    "Tasbehlar",
+                    "Hijob va tyurbanlar",
+                    "Kulonlar va marjonlar",
+                    "Doʻppilar",
+                    "Diniy to'plamlar",
+                ]
+            },
+            {
+                sectionName: "Tog' chang'i sport aksessuarlari",
+                sectionList: [
+                    "Qoʻlqoplar va varejkalar",
+                    "Qalpoqlar",
+                    "Sharflar",
                 ]
             },
         ]
@@ -1310,51 +1320,88 @@ let navListData = [
         id: 6,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Makiyaj",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Koʻzlar",
+                    "Yuz",
+                    "Lablar",
+                    "Makiyaj uchun aksessuarlar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Yuz oarvarishi",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Niqoblar",
+                    "Namlash va oziqlantirish",
+                    "Tozalash va yuvish",
+                    "Muammoli teri uchun mahsulorlar",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Soch parvarishi",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Tozalash va parvarish uchun vositalar",
+                    "Soch parvarishi uchun aksessuarlar",
+                    "Bo'yash va kimyoviy jingalak qilish",
+                    "Turmaklash uchun vositalar",
                 ]
             },
             {
-                sectionName: "Oshxona texnikalari",
+                sectionName: "Tana parvarishi",
                 sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
+                    "Ayollar dezodorantlari va antiperspirantlar",
+                    "Namlash va oziqlantirish",
+                    "Quyoshda toblanish va quyoshdan himoya",
+                    "Dush va vanna uchun vositalar",
                 ]
             },
             {
-                sectionName: "Katta maishiy texnika",
+                sectionName: "Manikyur va pedikyur",
                 sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Manikyur anjomlari",
+                    "Mankyur uchun lampalar va chiroqlar",
+                    "Tirnoqlar dizayni",
+                    "Laklar",
+                ]
+            },
+            {
+                sectionName: "Erkaklar uchun",
+                sectionList: [
+                    "Soqol olish uchun",
+                    "Erkaklar parfyumlari",
+                    "Tana parvarishi",
+                    "Soch uchun",
+                ]
+            },
+            {
+                sectionName: "Bolalarga va homilador ayollarga",
+                sectionList: [
+                    "Yog'"
+                ]
+            },
+            {
+                sectionName: "Parfyumeriya",
+                sectionList: [
+                    "Parfyumlangan suv",
+                    "Atirlar",
+                    "Xushbo'ylangan suv",
+                    "Yog'li atirlar",
+                ]
+            },
+            {
+                sectionName: "Tatuirovka saloni uchun uskunalar va materiallar",
+                sectionList: [
+                    "Tatuirovka parvarishi",
+                    "Tatuirovka mashinalari va aksessuarlari",
+                    "Tatuirovka to'plamlari",
+                    "Kartrijlar",
+                    "Pirsing uchun uskunalar",
+                ]
+            },
+            {
+                sectionName: "Aromaterapiya",
+                sectionList: [
+                    "Efir moylari",
                 ]
             },
         ]
@@ -1364,51 +1411,28 @@ let navListData = [
         id: 7,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Intim Kosmetika",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Stimulyatorlar va prolonatorlar",
+                    "Intim kosmetika vositalari",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Massaj uskunalari",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Tana uchun massaj moslamalari",
+                    "Oyoq uchun massaj moslamalari",
+                    "Bosh uchun massaj moslamalari",
+                    "Massaj gilamchalari",
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Ortopedik buyumlar",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
-                ]
-            },
-            {
-                sectionName: "Oshxona texnikalari",
-                sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
-                ]
-            },
-            {
-                sectionName: "Katta maishiy texnika",
-                sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Korsetlar va qomatni to'g'ri tutishga yordam beruvchi",
+                    "Bandajlar",
+                    "Ortopedik tagliklar",
+                    "Elastik bintlar",
                 ]
             },
         ]
@@ -1418,51 +1442,30 @@ let navListData = [
         id: 8,
         sections: [
             {
-                sectionName: "Goʻzallik uchun texnika",
+                sectionName: "Oshxona Buyumlari",
                 sectionList: [
-                    "Soch turmaklash",
-                    "Soch kesish",
-                    "Elektr ustaralar"
+                    "Oshxona anjomlari",
+                    "Oziq-ovqat mahsulotlarini saqlash",
+                    "Ovqat pishirish uchun idishlar",
+                    "Oshxonada tartib"
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "To'qimachilik",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
+                    "Choyshablar",
+                    "Sochiqlar",
+                    "Oshxona uchun tekstil mahsulotlari",
+                    "Yostiqlar"
                 ]
             },
             {
-                sectionName: "Iqlim texnikasi",
+                sectionName: "Xo'jalik buyumlari",
                 sectionList: [
-                    "Ventilyatorlar",
-                    "Havoni tozalash va namlashtirish",
-                    "Konditsionerlar va split tizimlar",
-                    "Isitgichlar",
-                    "Havo sovutgichlari",
-                    "Suv isitgichlari va isitish qozonlari"
-                ]
-            },
-            {
-                sectionName: "Oshxona texnikalari",
-                sectionList: [
-                    "Maydalash va aralashtirish",
-                    "Qovurish va pishirish uskunalari",
-                    "Elektr choynak va termopotlar",
-                    "Boshqa oshxona texnikalari",
-                ]
-            },
-            {
-                sectionName: "Katta maishiy texnika",
-                sectionList: [
-                    "Suv uchun kulerlar va aksessuarlar",
-                    "Katta maishiy texnika uchun aksessuarlar",
-                    "Sovutgichlar va mulatgichlar",
-                    "Kirsh yuvish mashinalari",
+                    "Tozalash ishlari uchun inventarlar",
+                    "Vanna uchun aksessuarlar",
+                    "Kiyim va poyabzallar parvarishi",
+                    "Qo'l torozilari va pallali torozilar"
                 ]
             },
         ]
@@ -2008,6 +2011,7 @@ let navListData = [
         ]
     }
 ];
+
 let navList = document.getElementById('nav__list');
 
 navListData.forEach((navItem) => {
@@ -2042,7 +2046,6 @@ function catalogAdd() {
         catalogX.style.display = "block";
         catalogIcon.style.display = "none";
 
-        // Kontentni yaratamiz
         navWrapper.innerHTML = `
             <div class="catalog-box">
                 <ul class="calatog-list">
@@ -2093,6 +2096,23 @@ function catalogAdd() {
         modalCatalog.appendChild(navWrapper);
         wrapperTransition.appendChild(modalCatalog);
         catalogNavListWrap.appendChild(wrapperTransition);
+
+        const initialCatalogData = navListData[0];
+        catalogTitle.textContent = initialCatalogData.catalog;
+
+        sectionsWrapper.innerHTML = initialCatalogData.sections.map(section => {
+            return `
+                <div class="section">
+                    <h3 class="catalog__title__section">${section.sectionName}</h3>
+                    <ul class="catalog-section-list">
+                        ${section.sectionList.map(item => `
+                            <li class="catalog-section-item">
+                                <a class="catalog-section-link" href="#">${item}</a>
+                            </li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }).join('');
     }
 }
 

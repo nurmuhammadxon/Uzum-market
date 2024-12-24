@@ -12,11 +12,7 @@ function handleSignUp() {
     const password = document.getElementById('signup-password').value;
 
     if (username && email && password) {
-        const user = {
-            username: username,
-            email: email,
-            password: password
-        };
+        const user = { username, email, password };
 
         loginList.push(user);
         localStorage.setItem('loginList', JSON.stringify(loginList));
@@ -36,6 +32,7 @@ function handleLogin() {
         const user = loginList.find(u => u.email === email && u.password === password);
 
         if (user) {
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
 
             const accountLabel = document.querySelector('.account__button__label');
             if (accountLabel) {
@@ -51,13 +48,6 @@ function handleLogin() {
     }
 }
 
-let backBtn = document.getElementById('back-btn');
-if (backBtn) {
-    backBtn.addEventListener('click', () => {
-        window.location.href = './index.html';
-    });
-}
-
 window.onload = function () {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser) {
@@ -67,4 +57,3 @@ window.onload = function () {
         }
     }
 };
-
